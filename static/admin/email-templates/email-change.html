@@ -1,0 +1,15 @@
+<!-- 文件完整路径：static/admin/email-templates/email-change.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <div style="font-family: Arial; max-width: 600px; margin: 0 auto;">
+    <a href="{{ .SiteURL }}/admin/#email_change_token={{ .Token }}" class="button">
+      确认邮箱变更
+    </a>
+    <p>若非本人操作，请忽略此邮件</p>
+  </div>
+</body>
+</html>

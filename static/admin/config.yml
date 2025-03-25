@@ -1,21 +1,8 @@
 backend:
   name: git-gateway
-  branch: main  # 你的Git分支名
+  branch: main
+  publish_mode: editorial_workflow  # 必须启用编辑流程
 
-# 移除集合内的access配置，保留全局access_control
-access_control:
-  - role: "writer"
-    collection: "posts"
-    actions: ["create", "update"]
-    status: ["draft"]
-  - role: "editor"
-    collection: "posts"
-    actions: ["read", "update", "delete"]
-    status: ["draft", "pending"]
-  - role: "admin"
-    collection: "*"
-    actions: ["*"]
-    status: ["*"]
 
 
 # 媒体文件存储设置
@@ -23,22 +10,42 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 # 内容集合配置
+
+# 强化权限控制（移除access_control，改用工作流权限）
 collections:
   - name: "blog"
     label: "文章"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    
+    # 工作流与权限深度绑定
     workflow:
       - label: "草稿"
         name: "draft"
-        meta: { status: "draft" }
+        meta: 
+          status: "draft"
+          permissions:  # 状态级权限控制
+            create: ["writer", "editor", "admin"]
+            update: ["writer", "editor", "admin"]
+            delete: ["editor", "admin"]
+
       - label: "待审核"
-        name: "pending"  # 统一状态名
-        meta: { status: "pending" }
+        name: "pending"
+        meta: 
+          status: "pending"
+          permissions:
+            update: ["editor", "admin"]  # writer不能修改待审内容
+            publish: ["admin"]          # 仅admin可发布
+
       - label: "已发布"
         name: "published"
-        meta: { status: "published" }
+        meta: 
+          status: "published"
+          permissions:
+            update: ["admin"]           # 仅admin可修改已发布内容
+            unpublish: ["admin"]
+
     fields:
       - label: "标题"
         name: "title"
