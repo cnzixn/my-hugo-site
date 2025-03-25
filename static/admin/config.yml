@@ -94,8 +94,6 @@ collections:
       - label: "内容"
         name: "body"
         widget: "markdown"
-        buttons: ["heading", "bold", "italic", "link", "quote", "code", "image"]
-        editor_components: ["image", "code-block"]
 
   - name: "generic_pages"
     label: "其他"
