@@ -11,4 +11,4 @@ hugo new posts/log-update-250301.md  --noBuildLock
 # 提交更新
 git add .
 git commit -m "Update main at $(date '+%Y-%m-%d %H:%M:%S')"
-git push origin main --f
+git push -f origin main
