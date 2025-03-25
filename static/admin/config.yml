@@ -72,7 +72,7 @@ collections:
       - label: "标签"
         name: "tags"
         widget: "list"
-        default: ["资料"]
+        default: ["其他"]
         allow_add: true  # 允许添加新标签
 
       - label: "别名"
