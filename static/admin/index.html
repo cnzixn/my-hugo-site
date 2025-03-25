@@ -11,18 +11,6 @@
   <!-- <script src="https://unpkg.com/netlify-cms@latest/dist/netlify-cms.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/netlify-cms@latest/dist/netlify-cms.js"></script> 
   <script>
-  CMS.registerEventListener({
-     type: 'prePublish',
-     handler: ({ entry }) => {
-       const userRole = CMS.auth.user.role;
-       const status = entry.getIn(['meta', 'status']);
-       
-       if (status === 'pending' && userRole !== 'admin') {
-         alert('只有管理员可发布内容！');
-         return false; // 阻止发布
-       }
-     }
-   });
   CMS.registerPreviewTemplate('posts', ({ entry }) => {
     const status = entry.getIn(['meta', 'status']);
     return h('div', {
@@ -37,6 +25,30 @@
     };
     return colors[status] || '#999';
   }
+  // 在index.html添加UI控制
+  CMS.registerAdditionalButton({
+    id: 'submit-review',
+    label: '提交审核',
+    handler: () => {
+      const entry = CMS.widgets.getEntry();
+      entry.get('meta').set('status', 'pending');
+      entry.commit();
+    },
+    // 只对非admin用户显示
+    condition: ({ user }) => user.role !== 'admin' 
+  });
+  CMS.registerEventListener({
+     type: 'prePublish',
+     handler: ({ entry }) => {
+       const userRole = CMS.auth.user.role;
+       const status = entry.getIn(['meta', 'status']);
+       
+       if (status === 'pending' && userRole !== 'admin') {
+         alert('只有管理员可发布内容！');
+         return false; // 阻止发布
+       }
+     }
+   });
   </script>
 </body>
 </html>
