@@ -102,8 +102,6 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
-    access:
-      - role: "admin"
     fields:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "布局", name: "layout", widget: "string", default: "page"}
