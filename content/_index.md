@@ -12,3 +12,4 @@ layout: "main"
   <a href="/redirect?target=https://qun.qq.com/qqweb/qunpro/share?inviteCode=2jKeVdfLFtI" class="button">问题反馈</a>
 </div>
 
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
