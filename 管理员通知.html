@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; max-width: 600px; margin: 3px auto; padding: 2px 2px; background-color: #f8f9fa }
+        .container { background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); padding: 5px }
+        .comment-card { background-color: #fff; border-radius: 6px; padding: 5px; margin: 5px 0; width: 96%; max-width: 600px; box-shadow: 0 1px 2px rgba(0,0,0,0.08) }
+        .user-avatar { width: 40px; height: 40px; border-radius: 50%; vertical-align: middle; margin-right: 15px; object-fit: cover }
+        .highlight { color: #e74c3c; font-weight: 500 }
+        .small-text { font-size: 14px; color: #7f8c8d; line-height: 1.5 }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px }
+        p { margin-bottom: 1.5em }
+        img { max-width: 100%; height: auto }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📢 ${SITE_NAME} 评论通知</h2>
+
+        <p style="color: #7f8c8d; margin-bottom: 25px">尊敬的管理员：</p>
+
+        
+        <div class="comment-card">
+            
+            <!-- 用户头像 -->
+            <div style="display: flex; align-items: center; margin-bottom: 15px">
+                <img src="${IMG}" class="user-avatar" alt="用户头像">
+            </div>
+        
+            <!-- 用户信息 -->
+            <div style="display: block; margin-top: 12px">
+                <p class="small-text">
+                    <strong>昵称：</strong> 
+                    <span class="highlight">${NICK}</span>
+                </p>
+                
+                <p class="small-text" style="margin-top: 8px">
+                    <strong>邮箱：</strong> 
+                    <span class="highlight">${MAIL}</span>
+                </p>
+                
+                <p class="small-text" style="margin-top: 8px">
+                    <strong>IP 地址：</strong> 
+                    <span class="highlight">${IP}</span>
+                </p>
+            </div>
+
+            <!-- 评论内容区块 -->
+            <h3 style="color: #34495e; margin-bottom: 15px; font-weight: 500"> 评论内容：</h3>
+            <div class="markdown-preview" style="background-color: #f8f9fa; padding: 12px; border-radius: 4px; margin-top: 8px">
+                ${COMMENT}
+            </div>
+        </div>
+
+        <!-- 关联文章区块 -->
+        <div class="comment-card">
+            <h3 style="color: #34495e; margin-bottom: 15px; font-weight: 500">📝 关联文章：</h3>
+            <a href="${POST_URL}" style="color: #3498db; text-decoration: none; font-weight: 500">${POST_URL}</a>
+        </div>
+
+        <p style="color: #7f8c8d; margin-top: 30px; font-size: 13px">
+            📧 此邮件由系统自动发送，请勿直接回复。<br>
+        </p>
+    </div>
+</body>
+</html>

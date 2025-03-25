@@ -1,3 +1,112 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+baseURL = ""
+title = ""
+theme = "hugo-notepadium"
+copyright = "©2025 兔人协会"
+
+languageCode = "zh-cn"
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+
+summaryLength = 9  # Summary Length
+
+[outputs]
+home = ["HTML", "JSON"]
+
+# [services.disqus]
+# shortname = "" # Disqus shortname
+
+# [services.googleAnalytics]
+# id = "" # Google tag ID
+
+[Pagination]
+pagerSize = 20  # 每页显示5篇文章
+path = "page"
+disableAliases = false
+
+
+[markup.highlight]
+codeFences = true
+noClasses = false
+lineNos = true           # 启用行号
+lineNumbersInTable = true
+# style = "github-dark"    # 选择你喜欢的配色方案
+
+
+
+[markup.goldmark.renderer]
+unsafe = true  # enable raw HTML in Markdown
+
+
+[params]
+style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
+dateFormat = ""  # if unset, default is "2006-01-02" Monday, January 2, 2006
+logo = "/images/logo.webp"  # if you have a logo png
+slogan = ""  # 100% JavaScript-free
+license = ""  # CC License
+fullRss = true # Puts entire HTML post into rss "description" tag. If unset, default is false.
+ipv6ready = false # Show IPV6Ready logo on footer.
+search = true
+# mainSections = ["posts"]
+
+
+[params.comments]
+enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
+
+# [params.comments.utterances]
+# 暂未使用
+# repo = "MetalBlueberry/MetalBlueberry.github.io" # enable comments with [utteranc.es](https://utteranc.es/)
+# repo = "cnzixn/utteranc" # enable comments with [utteranc.es](https://utteranc.es/)
+# issueTerm = "title"
+# label = "评论"
+# theme = ""
+
+[params.math]
+enable = true  # optional: true, false. Enable globally, default: false. You can always enable math on per page.
+use = "mathjax"  # option: "katex", "mathjax". default: "katex"
+
+[params.syntax]
+use = "none"  # builtin: "prismjs", "hljs". "none" means Chroma
+theme = "xcode"
+darkTheme = "xcode-dark"  # apply this theme in dark mode
+
+[params.share]
+enable = true
+addThisId = ""
+inlineToolId = ""
+
+[params.nav]
+showCategories = false       # /categories/
+showTags = false             # /tags/
+showBottom = false # article navigation
+
+# custom navigation items
+[[params.nav.custom]]
+title = "全部"
+url = "/posts"
+
+[[params.nav.custom]]
+title = "资料"
+url = "/tags/资料"
+
+[[params.nav.custom]]
+title = "日志"
+url = "/tags/日志"
+
+[[params.nav.custom]]
+title = "搜索"
+url = "/search"
+
+[[params.nav.custom]]
+title = "关于"
+url = "/about"
+
+[[params.nav.custom]]
+title = "小店"
+url = "/web-shop/"
+
+# for chinese
+[params.beian]
+  icp = ""     # example: 粤ICP备20056596号-1
+  gongan = ""  # example: 粤公网安备 44030502005645号
+  code = ""    # example: 44030502005645

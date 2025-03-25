@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.7; max-width: 600px; margin: 0 auto; padding: 5px 3px; background-color: #f8f9fa }
+        .container { background-color: #fff; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); padding: 25px }
+        .comment-card { background-color: #fff; border-radius: 6px; padding: 15px; margin: 20px 0; width: 96%; max-width: 600px; box-shadow: 0 1px 2px rgba(0,0,0,0.08) }
+        .user-avatar { width: 40px; height: 40px; border-radius: 50%; vertical-align: middle; margin-right: 15px; object-fit: cover }
+        .highlight { color: #e74c3c; font-weight: 500 }
+        .small-text { font-size: 14px; color: #7f8c8d; line-height: 1.5 }
+        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px }
+        p { margin-bottom: 1.5em }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>📢 ${SITE_NAME} 通知</h2>
+
+        <p style="color: #7f8c8d; margin-bottom: 25px">亲爱的@${PARENT_NICK}</p>
+
+        <!-- 用户自己的原始评论 -->
+        <div class="comment-card">
+            <div style="display: flex; align-items: center; margin-bottom: 12px">
+                <img src="${PARENT_IMG}" class="user-avatar" alt="头像">
+                <h3 style="color: #34495e; margin: 0 10px; font-weight: 500">你的评论：</h3>
+            </div>
+            <div class="markdown-preview" style="background-color: #f8f9fa; padding: 12px; border-radius: 4px; margin-top: 8px">
+                ${PARENT_COMMENT}
+            </div>
+        </div>
+
+        <p style="color: #7f8c8d; margin-bottom: 25px"> 收到<span class="highlight">@${NICK}</span></p>
+
+        <!-- 收到的回复内容 -->
+        <div class="comment-card">
+            <div style="display: flex; align-items: center; margin-bottom: 12px">
+                <img src="${IMG}" class="user-avatar" alt="回复者头像">
+                <h3 style="color: #34495e; margin: 0 10px; font-weight: 500"> 回复内容：</h3>
+            </div>
+            <div class="markdown-preview" style="background-color: #f8f9fa; padding: 12px; border-radius: 4px; margin-top: 8px">
+                ${COMMENT}
+            </div>
+        </div>
+
+        <!-- 关联内容模块 -->
+        <div class="comment-card">
+            <h3 style="color: #34495e; margin-bottom: 12px; font-weight: 500">🔗 相关文章：</h3>
+            <a href="${POST_URL}" style="color: #3498db; text-decoration: none; font-weight: 500">${POST_URL}</a>
+        </div>
+
+        <p style="color: #7f8c8d; margin-top: 30px; font-size: 13px">
+            📧 此邮件由系统自动发送，请勿直接回复。<br>
+        </p>
+    </div>
+</body>
+</html>

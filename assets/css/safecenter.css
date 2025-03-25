@@ -1,0 +1,106 @@
+
+      /* 全局样式 */
+      body {
+        font-family: 'Arial', sans-serif;
+      }
+
+      /* 页面容器 */
+      .safecenter-page {
+        max-width: 500px;
+        width: 96%;
+        margin: 50px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc; /* 添加这行代码，设置边框宽度为1px，样式为实线，颜色为#ccc */
+      }
+
+
+      /* 头部样式 */
+      .safecenter-page header {
+        margin-bottom: 20px;
+      }
+
+      .safecenter-page header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      .safecenter-page header p {
+        font-size: 1rem;
+        color: #666;
+      }
+      
+      .safecenter-page main {
+        text-align: center;
+      }
+
+      /* 目标链接样式 */
+      .safecenter-page .target-link {
+        font-size: 1.2rem;
+        margin: 20px 0;
+      }
+
+      .safecenter-page .target-link span {
+        color: #666;
+        font-weight: bold;
+      }
+
+      /* 按钮样式 */
+      .safecenter-page button {
+        display: inline-block;
+        padding: 10px 100px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .safecenter-page .safecenter-button-ok {
+        background-color: #007BFF;
+        color: #fff;
+        margin: 20px auto;
+      }
+
+      .safecenter-page .safecenter-button-ok:hover {
+        background-color: #0056b3;
+      }
+
+
+      .safecenter-page .cf-turnstile {
+      margin: 20px auto;
+      max-width: 400px;
+    }
+
+    .safecenter-page footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    .safecenter-page footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    .safecenter-page footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .safecenter-page header h1 {
+        font-size: 1.5rem;
+      }
+
+      .safecenter-page p {
+        font-size: 1rem;
+      }
+    }
+   
+   
+   
+   
+   

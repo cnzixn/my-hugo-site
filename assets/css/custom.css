@@ -1,0 +1,78 @@
+
+/*主页按钮*/
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* 竖排 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  min-height: 60vh; /* 使容器高度占满整个视口 */
+  gap: 15px; /* 按钮间距 */
+
+  .button {
+    display: inline-block;
+    padding: 15px 30px; /* 放大按钮 */
+    background-color: #6c757d; /* 使用柔和的灰色背景 */
+    color: #fff; /* 白色文字 */
+    text-decoration: none;
+    border-radius: 5px; /* 圆角更简洁 */
+    font-size: 16px; /* 使用主题一致的字体大小 */
+    font-family: 'Helvetica Neue', sans-serif; /* 假设是简洁字体 */
+    text-align: center;
+    width: 200px; /* 根据内容调整宽度 */
+    max-width: 250px; /* 设置最大宽度 */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 更细的阴影 */
+  }
+  
+  .button:hover {
+    background-color: #5a6268; /* 悬停时颜色更暗 */
+    transform: scale(1.05); /* 悬停时稍微放大 */
+  }
+  
+  .button:active {
+    background-color: #545b62; /* 按下时的颜色 */
+    transform: scale(0.98); /* 按下时缩小 */
+  }
+
+}
+
+
+/*搜索页面*/
+.tag-cloud {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag-button {
+  padding: 0.2rem 0.5rem;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.tag-button:hover:not(:disabled) {
+  background: #357abd;
+  transform: translateY(-2px);
+}
+
+.tag-button:active {
+  background: #2c5aa8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .tag-button {
+    padding: 0.2rem 0.36rem;
+  }
+}
+
+
+
+

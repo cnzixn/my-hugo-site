@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{- site.Language.Lang -}}">
+{{- partial "head.html" . -}}
+
+<body>
+    <!-- {{- partial "header.html" . -}} -->
+    <section id="content">
+        
+        
+        <div class="article-container">
+  <script src="{{ (resources.Get "js/turnstile.js" | minify | fingerprint).RelPermalink }}" defer></script>
+  <div class="safecenter-page">
+    <header>
+      <h1>安全中心</h1>
+    </header>
+    <main>
+      <p>请完成人机验证以继续访问...</p>
+
+      <!-- Cloudflare Turnstile 验证组件 -->
+      <div class="cf-turnstile" 
+           data-sitekey="0x4AAAAAAA_U9nz69o5CMYfs"
+           data-size="flexible"
+           data-callback="TurnstileCallback"
+           data-error-callback="TurnstileErrorCallback">
+      </div>
+    </main>
+
+    <footer>
+      <p>如果遇到问题，请联系 <a href="mailto:cnzixn@qq.com">cnzixn@qq.com</a> 。</p>
+    </footer>
+  </div>
+</div>
+        
+        
+    </section>
+    {{- partial "footer.html" . -}}
+</body>
+
+</html>

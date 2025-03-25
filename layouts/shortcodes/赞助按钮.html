@@ -1,0 +1,52 @@
+<div class="sponsor-button-wrapper" style="margin-top: 0.8rem; display: flex; justify-content: center;">
+  <button class="sponsor-button"
+          onclick="toggleSponsorQR(this)"
+          style="background: #4a90e2; color: white; padding: 0.8rem 5.8rem; border: none; border-radius: 5px; cursor: pointer; transition: all 0.2s ease;">
+    💝赞助作者
+  </button>
+
+  <!-- 二维码容器（默认隐藏） -->
+  <div id="sponsorQRContainer" 
+       class="sponsor-qr-container article-container"
+       style="max-width: 300px; display: none; position: fixed; top: 50%; left: 10%; transform: translate(-0%, -50%); padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1000;">
+    
+    <!-- 二维码内容区 -->
+    <div loading="lazy" style="text-align: center; ">
+      <img loading="lazy" src="{{ (resources.Get "images/wechat-qrcode.webp" | fingerprint).RelPermalink }}" alt="微信二维码" width="45%" style="margin-right: 10px; border: 2px solid #000; border-radius: 12px;">
+      <img loading="lazy" src="{{ (resources.Get "images/alipay-qrcode.webp" | fingerprint).RelPermalink }}" alt="支付宝二维码" width="45%" style="border: 2px solid #000; border-radius: 12px;">
+      <p>扫码支持作者，获取抢先体验内容。</p>
+      <small>留言 QQ 号码，管理员会给你发放测试码。</small>
+    </div>
+  
+    <!-- 右上角关闭按钮 -->
+    <button class="close-button"
+            onclick="toggleSponsorQR(event.target.parentElement)"
+            style="position: absolute; 
+                  top: 6px; 
+                  right: 2px; 
+                  background: transparent; 
+                  border: none; 
+                  color: #ff4d4f; 
+                  font-size: 12px; 
+                  font-weight: bold; 
+                  cursor: pointer; 
+                  z-index: 1001;">
+      ❌
+    </button>
+  </div>
+
+</div>
+
+<script>
+function toggleSponsorQR(buttonElement) {
+  const container = document.getElementById('sponsorQRContainer');
+  container.style.display = container.style.display === 'none' ? 'block' : 'none';
+  
+  // 如果需要添加关闭点击事件到整个容器
+  if (!container.onclick) {
+    container.onclick = function() {
+      this.style.display = 'none';
+    }
+  }
+}
+</script>

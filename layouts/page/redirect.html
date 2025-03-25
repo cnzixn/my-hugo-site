@@ -1,0 +1,51 @@
+{{ define "main" }}
+  <div class="safecenter-page">
+    <header>
+      <h1>安全中心</h1>
+      <p>您即将离开当前网站，请注意账号财产安全。</p>
+    </header>
+    <main>
+      <!-- 动态显示目标链接 -->
+      <p class="target-link"><span id="target-link"></span></p>
+
+      <!-- 跳转按钮 -->
+      <button class="safecenter-button-ok" onclick="redirectToTarget()">确认跳转</button>
+
+    </main>
+    
+    <footer>
+      <p>如果遇到问题，请联系 <a href="mailto:cnzixn@qq.com">cnzixn@qq.com</a> 。</p>
+    </footer>
+
+    <script>
+      // 页面加载时动态填充目标链接
+      function populateTargetLink() {
+        const target = new URLSearchParams(window.location.search).get('target');
+        if (target) {
+          document.getElementById('target-link').textContent = target; // 填充目标链接
+        } else {
+          document.getElementById('target-link').textContent = '目标链接无效';
+        }
+      }
+
+      // 跳转到目标链接
+      function redirectToTarget() {
+        const target = new URLSearchParams(window.location.search).get('target');
+        if (target) {
+          window.location.href = decodeURIComponent(target); // 跳转到目标链接
+        } else {
+          alert('无效的目标链接！');
+        }
+      }
+
+      // 返回上一页
+      function goBack() {
+        window.history.back();
+      }
+
+      // 页面加载完成后执行
+      document.addEventListener('DOMContentLoaded', populateTargetLink);
+    </script>
+
+  </div>
+{{ end }}

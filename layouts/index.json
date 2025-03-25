@@ -1,0 +1,16 @@
+{{- with .Site.RegularPages }}
+[
+  {{- range $index, $page := . }}
+    {{- if and (not (eq $page.Params.single true)) -}}
+      {{- if $index }},{{ end }}
+      {
+        "title": {{ $page.Title | jsonify }},
+        "content": {{ $page.Plain | truncate 200 | jsonify }},
+        "permalink": {{ $page.Permalink | jsonify }},
+        "aliases": {{ $page.Aliases | jsonify }},
+        "tags": {{ $page.Params.tags | jsonify }}
+      }
+    {{- end }}
+  {{- end }}
+]
+{{- end }}

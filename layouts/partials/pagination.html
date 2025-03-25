@@ -1,0 +1,142 @@
+
+{{- $paginator := . -}}
+{{- if gt $paginator.TotalPages 1 -}}
+{{- $current := $paginator.PageNumber -}}
+{{- $total := $paginator.TotalPages -}}
+{{- $windowSize := 7 -}} {{/* 改为7个页码窗口 */}}
+
+{{/* 计算起始和结束位置 */}}
+{{- $midPoint := div $windowSize 2 | math.Ceil -}} {{/* 计算中间位置（4）*/}}
+{{- $start := sub $current $midPoint -}}
+{{- $end := add $current $midPoint -}}
+
+{{/* 边界修正 */}}
+{{- if lt $start 1 -}}
+  {{- $start = 1 -}}
+  {{- $end = math.Min $total $windowSize -}}
+{{- else if gt $end $total -}}
+  {{- $end = $total -}}
+  {{- $start = math.Max 1 (sub $end $windowSize 1) -}}
+{{- end -}}
+
+
+<div class="pagination">
+    <ul>
+        {{/* 首页按钮 */}}
+        <li>
+            {{- if ne $current 1 -}}
+                <a href="{{ $paginator.First.URL }}">&laquo;</a>
+            {{- else -}}
+                <span class="disabled">&laquo;</span>
+            {{- end -}}
+        </li>
+
+        <!-- {{/* 在首页按钮后添加 */}} -->
+        <!-- {{- if gt $start 1 -}} -->
+        <!-- <li><span>...</span></li> -->
+        <!-- {{- end -}} -->
+
+
+        {{/* 页码区间 */}}
+        {{- range $i := seq $start $end -}}
+            {{- $page := index $paginator.Pagers (sub $i 1) -}}
+            <li>
+                {{- if eq $i $current -}}
+                    <span class="active">{{ $i }}</span>
+                {{- else -}}
+                    <a href="{{ $page.URL }}">{{ $i }}</a>
+                {{- end -}}
+            </li>
+        {{- end -}}
+
+        <!-- {{/* 在末页按钮前添加 */}} -->
+        <!-- {{- if lt $end $total -}} -->
+        <!-- <li><span>...</span></li> -->
+        <!-- {{- end -}} -->
+
+        {{/* 末页按钮 */}}
+        <li>
+            {{- if ne $current $total -}}
+                <a href="{{ $paginator.Last.URL }}">&raquo;</a>
+            {{- else -}}
+                <span class="disabled">&raquo;</span>
+            {{- end -}}
+        </li>
+    </ul>
+    <div class="page-count">第 {{ $current }} 页 / 共 {{ $total }} 页</div>
+</div>
+
+<style>
+
+/* 统一按钮尺寸 */
+.pagination ul {
+    display: flex;
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    align-items: center; /* 垂直居中 */
+    justify-content: center;  /* 水平居中 */
+}
+
+.pagination li {
+    flex-shrink: 0;
+}
+
+/* 核心修正 */
+.pagination a, 
+.pagination span {
+    display: inline-flex;      /* 改为行内弹性布局 */
+    justify-content: center;  /* 水平居中 */
+    align-items: center;
+    min-width: 36px;         /* 固定最小宽度 */
+    height: 28px;            /* 固定高度 */
+    padding: 6px;          /* 调整内边距 */
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;  /* 重要：包含边框在尺寸内 */
+    line-height: 1;
+}
+
+/* 解决省略号边框问题 */
+.pagination li:has(span:not(.active):not(.disabled)) {
+    border: none !important;
+    min-width: auto;
+    padding: 0;
+}
+
+/* 调整省略号样式 */
+.pagination li:has(span:not(.active):not(.disabled)) span {
+    border: none !important;
+    min-width: auto;
+    padding: 0 4px;
+}
+
+.pagination .active {
+    background: #2196F3;
+    color: white;
+    border-color: #2196F3;
+}
+
+.pagination a:not(.disabled):hover {
+    background: #f5f5f5;
+}
+
+.pagination .disabled {
+    color: #bdbdbd;
+    border-color: #eee;
+    cursor: not-allowed;
+}
+
+
+/* 统一所有状态尺寸 */
+.pagination a,
+.pagination span,
+.pagination .active,
+.pagination .disabled {
+    padding: 6px !important;
+}
+
+</style>
+{{- end -}}

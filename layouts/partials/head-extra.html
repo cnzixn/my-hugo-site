@@ -1,0 +1,11 @@
+<!--
+    for user-side override
+-->
+<!-- <link rel="stylesheet" href="{{ "css/footer.css" | relURL }}"> -->
+<!-- <link rel="stylesheet" href="{{ "css/welcome.css" | relURL }}"> -->
+<!-- <meta http-equiv="refresh" content="0;url=/verify?returnUrl={{ .Permalink }}"> -->
+
+<link rel="stylesheet" href="{{ (resources.Get "css/custom.css" | toCSS | minify | fingerprint).RelPermalink }}">
+<link rel="stylesheet" href="{{ (resources.Get "css/footer.css" | toCSS | minify | fingerprint).RelPermalink }}">
+<link rel="stylesheet" href="{{ (resources.Get "css/search.css" | toCSS | minify | fingerprint).RelPermalink }}">
+<link rel="stylesheet" href="{{ (resources.Get "css/safecenter.css" | toCSS | minify | fingerprint).RelPermalink }}">
