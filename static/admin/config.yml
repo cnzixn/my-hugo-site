@@ -1,31 +1,22 @@
 backend:
   name: git-gateway
   branch: main  # 你的Git分支名
-  commit_messages:
-    create: "创建新内容：{{collection}} - {{slug}}"
-    update: "更新内容：{{collection}} - {{slug}}"
-    delete: "删除内容：{{collection}} - {{slug}}"
-    uploadMedia: "上传媒体文件：{{path}}"
-    deleteMedia: "删除媒体文件：{{path}}"
 
-
-# 1. 全局权限控制
+# 移除集合内的access配置，保留全局access_control
 access_control:
-  # 初级作者权限
   - role: "writer"
     collection: "posts"
-    actions: ["create", "update"]  # 允许的操作
-    status: ["draft"]             # 只能操作草稿状态内容
-  # 高级编辑权限
+    actions: ["create", "update"]
+    status: ["draft"]
   - role: "editor"
     collection: "posts"
-    actions: ["update", "delete"]
-    status: ["draft", "pending_review"]  # 可操作草稿和待审内容
-  # 管理员权限
+    actions: ["read", "update", "delete"]
+    status: ["draft", "pending"]
   - role: "admin"
-    collection: "*"               # 所有集合
-    actions: ["*"]                # 所有操作
-    status: ["*"]                 # 所有状态
+    collection: "*"
+    actions: ["*"]
+    status: ["*"]
+
 
 # 媒体文件存储设置
 media_folder: "static/images/uploads"
@@ -43,10 +34,8 @@ collections:
         name: "draft"
         meta: { status: "draft" }
       - label: "待审核"
-        name: "review"
+        name: "pending"  # 统一状态名
         meta: { status: "pending" }
-        access: 
-          - role: "admin"
       - label: "已发布"
         name: "published"
         meta: { status: "published" }
@@ -100,6 +89,8 @@ collections:
     folder: "content"
     create: true
     slug: "{{slug}}"
+    access:
+      - role: "admin"
     fields:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "布局", name: "layout", widget: "string", default: "page"}
