@@ -1,12 +1,13 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main  # 你的Git分支名
   commit_messages:
     create: "创建新内容：{{collection}} - {{slug}}"
     update: "更新内容：{{collection}} - {{slug}}"
     delete: "删除内容：{{collection}} - {{slug}}"
     uploadMedia: "上传媒体文件：{{path}}"
     deleteMedia: "删除媒体文件：{{path}}"
+
 
 # 1. 全局权限控制
 access_control:
@@ -26,40 +27,22 @@ access_control:
     actions: ["*"]                # 所有操作
     status: ["*"]                 # 所有状态
 
-# 媒体文件设置
-media_folder: "static/media/uploads"  # 存储路径
-public_folder: "/media/uploads"      # 公开路径
-media_library: 
-  name: "cloudinary"  # 可选集成云存储
-  config: 
-    cloud_name: "your-cloud-name"
-    api_key: "{{env.CLOUDINARY_KEY}}"
-
-# 国际化设置
-i18n:
-  structure: "multiple_folders"
-  locales: ["zh", "en"]
-  default_locale: "zh"
+# 媒体文件存储设置
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 # 内容集合配置
 collections:
-  # 博客文章集合
   - name: "blog"
-    label: "博客文章"
-    label_singular: "文章"  # 单数形式
+    label: "文章"
     folder: "content/posts"
     create: true
-    delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: true  # 启用预览
-    
     # 权限控制
     access:
       - role: "admin"
       - role: "editor"
       - role: "writer"
-
     # 工作流程
     publish_mode: "editorial_workflow"
     workflow:
@@ -74,122 +57,78 @@ collections:
       - label: "已发布"
         name: "published"
         meta: { status: "published" }
-    
-    # 字段配置
     fields:
       - label: "标题"
         name: "title"
         widget: "string"
-        pattern: ["^.{10,100}$", "标题需10-100个字符"]
-      
-      - label: "发布日期"
+        default: "文章标题"
+        pattern: ['^.{10,100}$', "标题需10-100个字符"]
+
+      - label: "时间"
         name: "date"
         widget: "datetime"
-        format: "YYYY-MM-DDTHH:mm:ssZ"
-        date_format: "YYYY-MM-DD"
-        time_format: "HH:mm"
-        default: "{{now}}"
-      
+        format: "YYYY-MM-DDTHH:mm:ssZ"  # ISO 8601格式
+        date_format: "YYYY-MM-DD"       # 显示格式
+        time_format: "HH:mm:ss"         # 时间显示格式
+        default: "2025-02-28T12:00:00Z"
+
       - label: "作者"
         name: "author"
-        widget: "relation"  # 关联作者集合
-        collection: "authors"
-        search_fields: ["name"]
-        value_field: "name"
-        display_fields: ["name"]
-        default: "默认作者"
-      
-      - label: "封面图"
-        name: "featured_image"
-        widget: "image"
+        widget: "string"
+        default: "未知"
+        pattern: ['^.{1,50}$', "文章作者需1-50个字符"]
+
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        default: ["资料"]
+        allow_add: true  # 允许添加新标签
+
+      - label: "别名"
+        name: "aliases"
+        widget: "list"
+        default: ""
+        allow_add: true  # 允许添加新标签
         required: false
-        media_library: 
-          config: 
-            multiple: false
-      
-      - label: "文章摘要"
-        name: "excerpt"
-        widget: "text"
-        hint: "显示在文章列表中的简短描述"
-      
-      - label: "正文内容"
+
+      - label: "评论"
+        name: "comments"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "是否允许用户评论此文章"
+
+      - label: "内容"
         name: "body"
         widget: "markdown"
         buttons: ["heading", "bold", "italic", "link", "quote", "code", "image"]
         editor_components: ["image", "code-block"]
-      
-      - label: "文章标签"
-        name: "tags"
-        widget: "select"
-        multiple: true
-        options: 
-          - { label: "技术", value: "tech" }
-          - { label: "生活", value: "life" }
-          - { label: "教程", value: "tutorial" }
-        default: ["tech"]
-      
-      - label: "SEO设置"
-        name: "seo"
-        widget: "object"
-        collapsed: true
-        fields:
-          - { label: "Meta标题", name: "meta_title", widget: "string", required: false }
-          - { label: "Meta描述", name: "meta_description", widget: "text", required: false }
-          - { label: "关键词", name: "keywords", widget: "list", required: false }
-      
-      - label: "高级设置"
-        name: "advanced"
-        widget: "object"
-        collapsed: true
-        fields:
-          - label: "自定义模板"
-            name: "layout"
-            widget: "select"
-            options: ["post", "special"]
-            default: "post"
-          
-          - label: "是否置顶"
-            name: "sticky"
-            widget: "boolean"
-            default: false
-          
-          - label: "关闭评论"
-            name: "comments"
-            widget: "boolean"
-            default: false
-            hint: "启用后将禁止评论"
 
-  # 独立页面集合
-  - name: "pages"
-    label: "独立页面"
-    folder: "content/pages"
+  - name: "generic_pages"
+    label: "其他"
+    folder: "content"
     create: true
     slug: "{{slug}}"
-    # 权限控制
     access:
       - role: "admin"
     fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "页面路径", name: "url", widget: "string", pattern: ["^/[a-z0-9/-]+/$", "必须以/开头和结尾"] }
-      - { label: "页面内容", name: "body", widget: "markdown" }
-      - label: "页面模板"
-        name: "layout"
-        widget: "select"
-        options: ["page", "about", "contact"]
-        default: "page"
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "布局", name: "layout", widget: "string", default: "page"}
+      - {label: "内容", name: "body", widget: "markdown"}
 
-  # 作者集合
-  - name: "authors"
-    label: "作者信息"
-    folder: "content/authors"
-    identifier_field: "name"
-    fields:
-      - { label: "姓名", name: "name", widget: "string" }
-      - { label: "头像", name: "avatar", widget: "image" }
-      - { label: "简介", name: "bio", widget: "text" }
-      - { label: "社交媒体", name: "social", widget: "object", fields: [...] }
 
-# 自定义预览模板
-# display_url: "https://your-site.com/preview/{{slug}}"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
