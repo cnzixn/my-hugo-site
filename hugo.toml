@@ -87,7 +87,7 @@ showBottom = false # article navigation
 # custom navigation items
 [[params.nav.custom]]
 title = "全部"
-url = "/zh/posts"
+url = "/posts"
 
 [[params.nav.custom]]
 title = "资料"
@@ -99,15 +99,15 @@ url = "/tags/日志"
 
 [[params.nav.custom]]
 title = "搜索"
-url = "/zh/search"
+url = "/search"
 
 [[params.nav.custom]]
 title = "关于"
-url = "/zh/about"
+url = "/about"
 
 [[params.nav.custom]]
 title = "小店"
-url = "/zh/web-shop/"
+url = "/web-shop/"
 
 # for chinese
 [params.beian]
