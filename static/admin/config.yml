@@ -87,7 +87,7 @@ collections:
       - label: "别名"
         name: "aliases"
         widget: "list"
-        default: ""
+        default: [""]
         allow_add: true  # 允许添加新标签
         required: false
 
