@@ -9,5 +9,21 @@
 <body>
   <!-- 包含 Netlify CMS 脚本 -->
   <script src="https://unpkg.com/netlify-cms@latest/dist/netlify-cms.js"></script>
+  <script>
+  CMS.registerPreviewTemplate('posts', ({ entry }) => {
+    const status = entry.getIn(['meta', 'status']);
+    return h('div', {
+      style: `border-left: 5px solid ${getStatusColor(status)}`
+    }, /* 预览内容 */);
+  });
+  function getStatusColor(status) {
+    const colors = {
+      draft: '#ccc',
+      pending: '#fa0',
+      published: '#0c0'
+    };
+    return colors[status] || '#999';
+  }
+  </script>
 </body>
 </html>
