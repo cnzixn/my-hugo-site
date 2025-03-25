@@ -1,21 +1,23 @@
-+++
-author = "Hugo Authors"
-title = "Test"
-date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags = [
-    "markdown",
-    "css",
-    "html",
-    "themes",
-]
-categories = [
-    "themes",
-    "syntax",
-]
-series = ["Themes Guide"]
-aliases = ["migrate-from-jekyll"]
-+++
+---
+title: migrate-from-jekyll
+date: 2025-03-26T00:36:39+08:00
+author: Admin
+comments: true
+series:
+  - Themes Guide
+tags:
+  - markdown
+  - css
+  - html
+  - themes
+categories:
+  - themes
+  - syntax
+description: Sample article showcasing basic Markdown syntax and formatting for
+  HTML elements.
+aliases:
+  - test
+---
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 <!--more-->
