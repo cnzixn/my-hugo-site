@@ -20,6 +20,46 @@
           }
         });
       }
+      // 保存文章
+      CMS.registerEventListener({
+        name: 'preSave',
+        handler: ({ entry, author }) => {
+          const currentStatus = entry.getMetaData()?.status || 'draft';
+          const newStatus = entry.get('status')?.get('raw') || currentStatus;
+          const userRoles = author?.roles || [];
+      
+          // 允许保存草稿（不改变状态）
+          if (currentStatus === newStatus) return;
+      
+          // 规则：
+          // - 未分配角色的用户（默认用户）视为 Writer
+          // - Editor 和 Admin 保持原有逻辑
+          if (userRoles.length === 0) {  // 未分配角色的用户
+            if (currentStatus !== 'draft' || newStatus !== 'in_review') {
+              throw new Error('默认用户只能将草稿提交到 In Review！');
+            }
+          } else if (userRoles.includes('editor')) {  // Editor 角色
+            if (currentStatus !== 'in_review' || newStatus !== 'ready') {
+              throw new Error('Editor 只能将 In Review 标记为 Ready！');
+            }
+          }
+          // Admin 无限制
+        }
+      });
+      // 删除文章
+      CMS.registerEventListener({
+        name: 'preDelete',
+        handler: ({ entry, author }) => {
+          const status = entry.get('status'); // 假设状态字段名为status
+          const userRole = author.role; // 用户角色
+          // 如果内容已发布，且用户不是Editor或Admin，则阻止删除
+          if (status === 'published' && !['editor', 'admin'].includes(userRole)) {
+            throw new Error('只有Editor和Admin可以删除已发布的内容！');
+          }
+          // 其他情况允许删除
+          return;
+        }
+      });
     </script>
   </body>
 </html>
