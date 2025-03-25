@@ -1,9 +1,7 @@
 ---
-date: '2025-02-25'
-layout: 'main'
 title: '小店'
 single: true
-comments: false
+layout: post
 ---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">

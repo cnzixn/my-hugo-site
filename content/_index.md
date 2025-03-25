@@ -1,8 +1,7 @@
 ---
 title: "主页"
-date: 2023-10-01
-layout: main
 single: true
+layout: post
 ---
 
 

@@ -2,7 +2,6 @@
 title: "关于"
 single: true
 layout: post
-comments: false
 ---
 
 <h1 class="article header">兔人协会</h1>
