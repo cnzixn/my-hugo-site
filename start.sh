@@ -6,3 +6,9 @@ rm -rf public; hugo server -w --minify --noBuildLock
 rm -rf public; hugo --minify --noBuildLock
 
 hugo new posts/log-update-250301.md  --noBuildLock 
+
+
+# 提交更新
+git add .
+git commit -m "Update main at $(date '+%Y-%m-%d %H:%M:%S')"
+git push origin main --f
