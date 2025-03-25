@@ -9,6 +9,14 @@ hugo new posts/log-update-250301.md  --noBuildLock
 
 
 
+# 本地后台(身份验证)
+npx decap-server
+
+# hugo本地网站(后台管理)
+http://localhost:1313/admin
+
+
+
 # 在线编辑后，需要拉取到本地
 git pull
 

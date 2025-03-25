@@ -10,6 +10,11 @@ enableRobotsTXT = true
 
 summaryLength = 9  # Summary Length
 
+defaultContentLanguage = "zh"
+[languages.zh]
+languageName = "中文"
+weight = 1
+
 [outputs]
 home = ["HTML", "JSON"]
 
@@ -20,7 +25,7 @@ home = ["HTML", "JSON"]
 # id = "" # Google tag ID
 
 [Pagination]
-pagerSize = 20  # 每页显示5篇文章
+pagerSize = 20  # 每页显示文章
 path = "page"
 disableAliases = false
 
@@ -82,7 +87,7 @@ showBottom = false # article navigation
 # custom navigation items
 [[params.nav.custom]]
 title = "全部"
-url = "/posts"
+url = "/zh/posts"
 
 [[params.nav.custom]]
 title = "资料"
@@ -94,15 +99,15 @@ url = "/tags/日志"
 
 [[params.nav.custom]]
 title = "搜索"
-url = "/search"
+url = "/zh/search"
 
 [[params.nav.custom]]
 title = "关于"
-url = "/about"
+url = "/zh/about"
 
 [[params.nav.custom]]
 title = "小店"
-url = "/web-shop/"
+url = "/zh/web-shop/"
 
 # for chinese
 [params.beian]
