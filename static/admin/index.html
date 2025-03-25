@@ -24,26 +24,14 @@
       CMS.registerEventListener({
         name: 'preSave',
         handler: ({ entry, author }) => {
-          const currentStatus = entry.getMetaData()?.status || 'draft';
-          const newStatus = entry.get('status')?.get('raw') || currentStatus;
+          const newStatus = entry.get('status')?.get('raw') || 'draft';
           const userRoles = author?.roles || [];
-      
-          // 允许保存草稿（不改变状态）
-          if (currentStatus === newStatus) return;
-      
           // 规则：
-          // - 未分配角色的用户（默认用户）视为 Writer
-          // - Editor 和 Admin 保持原有逻辑
           if (userRoles.length === 0) {  // 未分配角色的用户
-            if (currentStatus !== 'draft' || newStatus !== 'in_review') {
+            if (newStatus == 'ready') {
               throw new Error('默认用户只能将草稿提交到 In Review！');
             }
-          } else if (userRoles.includes('editor')) {  // Editor 角色
-            if (currentStatus !== 'in_review' || newStatus !== 'ready') {
-              throw new Error('Editor 只能将 In Review 标记为 Ready！');
-            }
           }
-          // Admin 无限制
         }
       });
       // 删除文章
