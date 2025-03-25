@@ -38,13 +38,6 @@ collections:
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    # 权限控制
-    access:
-      - role: "admin"
-      - role: "editor"
-      - role: "writer"
-    # 工作流程
-    publish_mode: "editorial_workflow"
     workflow:
       - label: "草稿"
         name: "draft"
@@ -87,7 +80,7 @@ collections:
       - label: "别名"
         name: "aliases"
         widget: "list"
-        default: [""]
+        default: ["url"]
         allow_add: true  # 允许添加新标签
         required: false
 
