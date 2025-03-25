@@ -1,7 +1,7 @@
 ---
 title: "主页"
 single: true
-layout: post
+layout: "main"
 ---
 
 

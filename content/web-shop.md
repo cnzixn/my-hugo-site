@@ -1,7 +1,7 @@
 ---
 title: '小店'
 single: true
-layout: post
+layout: "main"
 ---
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">

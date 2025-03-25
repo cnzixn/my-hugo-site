@@ -49,7 +49,6 @@ ipv6ready = false # Show IPV6Ready logo on footer.
 search = true
 # mainSections = ["posts"]
 
-
 [params.comments]
 enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
