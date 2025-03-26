@@ -13,10 +13,6 @@ publish_mode: editorial_workflow
 media_folder: static/img
 public_folder: /img
 
-# 启用审稿流程
-editorial_workflow: true
-
-
 collections:
   - name: "posts"
     label: "文章"
@@ -31,6 +27,8 @@ collections:
       - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
+    # 启用审稿流程(文章页面不会有 Publish 按钮)
+    editorial_workflow: true
 
   - name: "pages"
     label: "其他"
