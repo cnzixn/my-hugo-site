@@ -20,34 +20,22 @@
           }
         });
       }
-      // 保存文章
-      CMS.registerEventListener({
-        name: 'preSave',
-        handler: ({ entry, author }) => {
-          const newStatus = entry.get('status')?.get('raw') || 'draft';
-          const userRoles = author?.roles || [];
-          // 规则：
-          if (userRoles.length === 0) {  // 未分配角色的用户
-            if (newStatus == 'ready') {
-              throw new Error('默认用户只能将草稿提交到 In Review！');
-            }
-          }
-        }
-      });
-      // 删除文章
-      CMS.registerEventListener({
-        name: 'preDelete',
-        handler: ({ entry, author }) => {
-          const status = entry.get('status'); // 假设状态字段名为status
-          const userRole = author.role; // 用户角色
-          // 如果内容已发布，且用户不是Editor或Admin，则阻止删除
-          if (status === 'published' && !['editor', 'admin'].includes(userRole)) {
-            throw new Error('只有Editor和Admin可以删除已发布的内容！');
-          }
-          // 其他情况允许删除
-          return;
-        }
-      });
+
+CMS.registerEventListener({
+  name: 'preSave',
+  handler: ({ entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+});
+
+CMS.registerEventListener({
+  name: 'prePublish',
+  handler: ({ author, entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+});
+
+CMS.registerEventListener({
+  name: 'preUnpublish',
+  handler: ({ author, entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+});
+
     </script>
   </body>
 </html>

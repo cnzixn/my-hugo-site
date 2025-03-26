@@ -1,5 +1,5 @@
 # when using the default proxy server port
-local_backend: false
+# local_backend: true
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
@@ -54,7 +54,7 @@ collections:
         - { label: 审核通过, name: ready }
         - { label: 公开发表, name: published }
 
-  - name: "generic_pages"
+  - name: "pages"
     label: "其他"
     folder: "content"
     create: true
