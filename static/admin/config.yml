@@ -7,14 +7,14 @@ backend:
   # repo: cnzixn/my-hugo-site
   squash_merges: true
   open_authoring: true
+  auth_scope: repo
 
-publish_mode: editorial_workflow
 
 media_folder: static/img
 public_folder: /img
 
-# 启用审稿流程(文章页面不会有 Publish 按钮)
-editorial_workflow: true
+publish_mode: editorial_workflow
+# editorial_workflow: true
 
 collections:
   - name: "posts"
@@ -30,6 +30,13 @@ collections:
       - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
+    publish: false  # 普通用户不可直接发布
+    workflow:
+      transitions:
+        - label: "提交审核"
+          name: "submit_review"
+          to: "in_review"
+          roles: ["admin", "editor"]  # 普通用户无此权限[citation:1]
 
   - name: "pages"
     label: "其他"
