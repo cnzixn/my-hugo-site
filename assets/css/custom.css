@@ -74,5 +74,36 @@
 }
 
 
+/* 新增修复样式 */
+.article-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
 
+.article-title {
+  margin: 0 !important; /* 清除默认边距 */
+  display: inline-flex;
+  align-items: center;
+}
 
+.edit-button {
+  flex-shrink: 0;
+  margin-left: 0.8rem;
+  transform: translateY(1px); /* 视觉对齐微调 */
+}
+
+/* 移动端适配调整 */
+@media (max-width: 768px) {
+  .article-header {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  
+  .edit-button {
+    position: static;
+    transform: none;
+    order: 1; /* 移动端可换行到标题下方 */
+  }
+}
