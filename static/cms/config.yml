@@ -17,7 +17,7 @@ collections:
   - name: "posts"
     label: "文章"
     folder: "content/posts"
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       # - {label: "状态", name: "status", widget: "select", options: ["draft", "in_review", "published"]}
       - {label: "标题2", name: "title"}
@@ -42,20 +42,5 @@ collections:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "布局", name: "layout", widget: "string", default: "page"}
       - {label: "内容", name: "body", widget: "markdown"}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
