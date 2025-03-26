@@ -8,13 +8,7 @@ backend:
   squash_merges: true
   name: git-gateway
   branch: main # Branch to update (optional; defaults to master)
-  open_authoring: true
-  commit_messages:
-    create: "由 {{author.name }} 创建"
-    update: "由 {{author.name }} 更新"
-    delete: "由 {{author.name }} 删除"
-    uploadMedia: "由 {{author.name }} 上传媒体"
-    deleteMedia: "由 {{author.name }} 删除媒体"
+  # open_authoring: true
 
 # These lines should *not* be indented
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
@@ -43,15 +37,6 @@ collections:
       - {label: "别名", name: "aliases", widget: "list"}
       - {label: "评论", name: "comments", widget: "boolean"}
       - {label: "内容", name: "body", widget: "markdown"}
-    access:
-      # create: user, editor, admin
-      update: editor, admin
-      delete: admin
-    workflow:
-      states:
-        - { label: 草稿, name: draft }
-        - { label: 提交审核, name: in_review }
-        - { label: 审核通过, name: ready }
 
   - name: "pages"
     label: "其他"
