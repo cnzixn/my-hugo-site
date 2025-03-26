@@ -1,5 +1,6 @@
 local_backend: true
 locale: "zh" # 语言环境
+publish_mode: editorial_workflow
 
 backend:
   name: git-gateway
@@ -42,8 +43,6 @@ roles:
 
 media_folder: static/img
 public_folder: /img
-
-# publish_mode: editorial_workflow
 
 collections:
   - name: "posts"
