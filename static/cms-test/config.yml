@@ -1,10 +1,10 @@
 local_backend: true
 
 backend:
-  name: git-gateway
-  branch: main
-  # name: github
-  # repo: cnzixn/my-hugo-site
+  # name: git-gateway
+  # branch: main
+  name: github
+  repo: cnzixn/my-hugo-site
   squash_merges: true
   open_authoring: true
 
