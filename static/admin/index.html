@@ -20,22 +20,29 @@
           }
         });
       }
-
-CMS.registerEventListener({
-  name: 'preSave',
-  handler: ({ entry }) => console.log(JSON.stringify({ data: entry.get('data') })),
-});
-
-CMS.registerEventListener({
-  name: 'prePublish',
-  handler: ({ author, entry }) => console.log(JSON.stringify({ data: entry.get('data') })),
-});
-
-CMS.registerEventListener({
-  name: 'preUnpublish',
-  handler: ({ author, entry }) => console.log(JSON.stringify({ data: entry.get('data') })),
-});
-
+      
+      CMS.registerWidget(
+  'status',
+  'select',
+  class ControlStatusWidget extends CMS.Widget {
+    getOptions() {
+      const userRoles = CMS.user?.roles || [];
+      const allOptions = [
+        { label: '草稿', value: 'draft' },
+        { label: '提交审核', value: 'in_review' },
+        { label: '审核通过', value: 'ready' }
+      ];
+      
+      // 根据角色过滤选项
+      if (userRoles.includes('writer')) {
+        return allOptions.filter(opt => opt.value !== 'ready');
+      }
+      return allOptions;
+    }
+  }
+);
+      
+      
     </script>
   </body>
 </html>

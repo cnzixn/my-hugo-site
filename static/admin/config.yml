@@ -44,15 +44,14 @@ collections:
       - {label: "评论", name: "comments", widget: "boolean"}
       - {label: "内容", name: "body", widget: "markdown"}
     access:
-      create: writer, editor, admin
-      update: writer, editor, admin
-      delete: writer, editor, admin  # 前端代码会细化控制
+      # create: user, editor, admin
+      update: editor, admin
+      delete: admin
     workflow:
       states:
         - { label: 草稿, name: draft }
         - { label: 提交审核, name: in_review }
         - { label: 审核通过, name: ready }
-        - { label: 公开发表, name: published }
 
   - name: "pages"
     label: "其他"
