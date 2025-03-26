@@ -29,6 +29,22 @@ collections:
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
     # publish: false  # 普通用户不可直接发布
+    workflow:
+      publish_mode: editorial_workflow  # 确保启用工作流
+      filters:
+        - label: "Draft"
+          name: "draft"
+          filter:
+            status: "draft"  # 仅显示草稿状态内容
+        - label: "In Review"
+          name: "in_review"
+          filter:
+            status: "in_review"  # 仅显示审核中内容
+    # 删除或注释掉 "ready" 的配置块 ▼
+    # - label: "Ready"
+    #   name: "ready"
+    #   filter:
+    #     status: "ready"
 
   - name: "pages"
     label: "其他"

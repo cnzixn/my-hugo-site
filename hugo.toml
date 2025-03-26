@@ -46,7 +46,7 @@ unsafe = true  # enable raw HTML in Markdown
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = ""  # if unset, default is "2006-01-02" Monday, January 2, 2006
-logo = "/images/logo.webp"  # if you have a logo png
+logo = "/img/logo.webp"  # if you have a logo png
 slogan = ""  # 100% JavaScript-free
 license = ""  # CC License
 fullRss = true # Puts entire HTML post into rss "description" tag. If unset, default is false.

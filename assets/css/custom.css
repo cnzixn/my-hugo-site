@@ -1,4 +1,18 @@
 
+
+/* 为所有图片添加灰色边框和圆角 */
+img {
+    border: 1px solid #ddd;     /* 边框颜色和粗细 */
+    padding: 0;               /* 内边距 */
+    border-radius: 4px;         /* 圆角 */
+}
+
+/* 可选：为响应式图片保持比例 */
+/*img.responsive {*/
+    /*max-width: 100%;*/
+    /*height: auto;*/
+/*}*/
+
 /*主页按钮*/
 .button-container {
   margin-top: 20px;
