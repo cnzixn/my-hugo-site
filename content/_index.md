@@ -1,10 +1,8 @@
 ---
-title: "主页"
+title: 主页
 single: true
-layout: "main"
+layout: main
 ---
-
-
 <div class="button-container">
   <a href="/posts/guide" class="button">新人指路</a>
   <a href="/redirect?target=https://jq.qq.com/?k=5WukPKv" class="button">加入群聊</a>
@@ -13,3 +11,7 @@ layout: "main"
 </div>
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+
+
+管理员更改了主页
