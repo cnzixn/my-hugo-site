@@ -25,7 +25,7 @@ collections:
       - {label: "作者", name: "author", default: "bny"}
       - {label: "标签", name: "tags", widget: "list"}
       - {label: "短链", name: "aliases", widget: "list"}
-      - {label: "评论", name: "comments", default: "true"}
+      - {label: "评论区", name: "comments", default: "true"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
     # publish: false  # 普通用户不可直接发布
