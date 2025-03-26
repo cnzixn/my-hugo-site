@@ -28,7 +28,8 @@ collections:
       # - {label: "评论区", name: "comments", default: "true", hide: true}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
-    publish: false  # 普通用户不可直接发布
+    publish: false  # 普通用户不可发布
+    delete: false    # 普通用户不可删除
 
   # - name: "pages"
     # label: "其他"
