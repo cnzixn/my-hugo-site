@@ -14,7 +14,7 @@ media_folder: static/img
 public_folder: /img
 
 publish_mode: editorial_workflow
-# editorial_workflow: true
+editorial_workflow: true
 
 collections:
   - name: "posts"
@@ -31,23 +31,7 @@ collections:
       - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
-    publish: false  # 普通用户不可直接发布
-    workflow:
-      - label: "草稿"
-        name: "draft"
-        delete: true
-        transitions:
-          - label: "提交审核"
-            name: "submit_review"
-            to: "in_review"
-            roles: ["admin", "editor"]  # 管理员也必须显式提交审核
-      - label: "审核中"
-        name: "in_review"
-        transitions:
-          - label: "批准发布"
-            name: "approve"
-            to: "published"
-            roles: ["admin"]  # 仅管理员可最终发布
+    # publish: false  # 普通用户不可直接发布
 
   - name: "pages"
     label: "其他"

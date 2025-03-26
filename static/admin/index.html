@@ -20,6 +20,16 @@
           }
         });
       }
+      // admin/custom.js
+CMS.registerEventListener({
+  onLogin: ({ user }) => {
+    // 即使管理员也隐藏状态切换控件
+    document.querySelectorAll('[data-testid="status-select"]').forEach(el => {
+      el.style.display = 'none';
+    });
+    
+  }
+});
     </script>
   </body>
 </html>
