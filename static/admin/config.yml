@@ -23,49 +23,14 @@ collections:
     folder: "content/posts"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - {label: "标题", name: "title", widget: "string"}
+      - {label: "标题", name: "title"}
       - {label: "时间", name: "date", widget: "datetime"}
-      - {label: "作者", name: "author", widget: "string"}
-      - {label: "标签", name: "tags", widget: "list"}
-      - {label: "别名", name: "aliases", widget: "list"}
-      - {label: "评论", name: "comments", widget: "boolean"}
+      - {label: "作者", name: "author"}
+      - {label: "标签", name: "tags"}
+      - {label: "别名", name: "aliases"}
+      - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
-    # delete: true
-    # 禁止直接发布
-    publish: false
-    # 强制启用审稿流程
-    editorial_workflow: true
-    workflow:
-      - label: '草稿'
-        name: 'draft'
-        # 允许普通用户删除自己的草稿
-        delete: true  
-        transitions:
-          - label: '提交审核'
-            name: 'submit_review'
-            to: 'in_review'
-            # 仅允许 draft → in_review
-            roles: ['guest']  # 未登录用户权限
-      - label: '审核中'
-        name: 'in_review'
-        transitions:
-          - label: '通过审核'
-            name: 'approve'
-            to: 'ready'
-            roles: ['editor']  # 仅编辑可操作
-          - label: '退回修改'
-            name: 'reject'
-            to: 'draft'
-            roles: ['editor']
-      - label: '就绪'
-        name: 'ready'
-        publish: true
-        transitions:
-          - label: '发布'
-            name: 'publish'
-            to: 'published'
-            roles: ['admin']  # 仅管理员可最终发布
 
   - name: "pages"
     label: "其他"
