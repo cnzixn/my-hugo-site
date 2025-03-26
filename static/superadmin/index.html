@@ -17,19 +17,11 @@
             window.netlifyIdentity.on("login", () => {
               document.location.href = "/admin/";
             });
+          }else if !(user.role = 'admin' && window.location.href.includes('/superadmin')) {
+            window.location.href = '/admin';  # 强制跳回普通后台
           }
         });
       }
-      // admin/custom.js
-CMS.registerEventListener({
-  onLogin: ({ user }) => {
-    // 即使管理员也隐藏状态切换控件
-    document.querySelectorAll('[data-testid="status-select"]').forEach(el => {
-      el.style.display = 'none';
-    });
-    
-  }
-});
     </script>
   </body>
 </html>
