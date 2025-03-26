@@ -1,10 +1,14 @@
-+++
-title = "BM000-兔人优化包"
-date = "2025-03-07"
-author = "Bny"
-tags = ["模组", "其他"]
-aliases = ["BM000"]
-+++
+---
+title: BM000-兔人优化包
+date: 2025-03-07
+author: Bny
+tags:
+  - 模组
+  - 其他
+aliases:
+  - BM000
+comments: true
+---
 
 > 本文介绍了模组 **兔人优化包** 的功能与特点。
 
