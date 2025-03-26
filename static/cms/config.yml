@@ -17,7 +17,7 @@ collections:
   - name: "posts"
     label: "文章"
     folder: "content/posts"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       # - {label: "状态", name: "status", widget: "select", options: ["draft", "in_review", "published"]}
       - {label: "标题2", name: "title"}

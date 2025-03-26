@@ -1,4 +1,7 @@
 
+
+
+
 cd /sdcard/acode/web1/
 
 rm -rf public; hugo server -w --minify --noBuildLock 
