@@ -13,7 +13,7 @@ aliases = ["BM390"]
 ## 文件下载
 
 > [BM390] 远古守卫者AncientGuardian  
-{{< 网盘链接 "BM390" >}}  
+{{< pan "BM390" >}}  
 
 ---
 

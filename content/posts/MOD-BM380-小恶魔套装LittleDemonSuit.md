@@ -13,7 +13,7 @@ aliases = ["BM380"]
 ## 文件下载
 
 > [BM380] 小恶魔套装LittleDemonSuit  
-{{< 网盘链接 "BM380" >}}  
+{{< pan "BM380" >}}  
 
 ---
 

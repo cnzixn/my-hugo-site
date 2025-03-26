@@ -37,7 +37,7 @@ aliases = ["guide"]
 推荐 1.33.4 版本  
 　船难(Shipwrecked) 是 Klei 和 CAPY Games 联合开发的一款 DLC 扩展包。  
 **Play商店**: [[付费购买]](/redirect?target=https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked)  
-{{< 网盘链接 游戏 >}}  
+{{< pan 游戏 >}}  
 
 ---
 
@@ -45,7 +45,7 @@ aliases = ["guide"]
 
 已适配官方正版  
 　兔人框架：适配 ShipWrecked 1.23 以上版本，包括最新的 1.33.4 版本。  
-{{< 网盘链接 "框架" >}}  
+{{< pan "框架" >}}  
 
 ---
 
@@ -55,10 +55,10 @@ aliases = ["guide"]
 　兔人模组：“手机版”的大部分模组由大佬从“创意工坊”移植而来，兔人协会收集整理后，“额外”保存一份(简单加密，不允许篡改)。  
 　转存后，可能无法获取到更新的文件，需删除网盘中的旧文件，并重新转存。  
 　通过 [[搜索]](/search) 页面，可以快速查找你想玩的模组。  
-{{< 网盘链接 "模组" >}}  
+{{< pan "模组" >}}  
 
 ---
 
-{{< 赞助按钮 >}}
+{{< reward-button >}}
 
 ---

@@ -164,7 +164,7 @@ comments = false
 
 ---
 
-{{< 赞助按钮 >}}
+{{< reward-button >}}
 
 ---
 

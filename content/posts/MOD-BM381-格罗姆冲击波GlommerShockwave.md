@@ -13,7 +13,7 @@ aliases = ["BM381"]
 ## 文件下载
 
 > [BM381] 格罗姆冲击波GlommerShockwave  
-{{< 网盘链接 "BM381" >}}  
+{{< pan "BM381" >}}  
 
 ---
 

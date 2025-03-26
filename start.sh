@@ -18,10 +18,13 @@ http://localhost:1313/admin
 
 
 # 在线编辑后，需要拉取到本地
-git pull
+git pull ; git commit -m "Merge main at $(date '+%Y-%m-%d %H:%M:%S')" ;
+
 
 # 提交更新
 git add . ; git commit -m "Update main at $(date '+%Y-%m-%d %H:%M:%S')" ; git push -u origin main
 
 
 find "./content" -type f -exec sed -i 's/网盘链接/pan/g' {} +
+find "./content" -type f -exec sed -i 's/赞助按钮/reward-button/g' {} +
+find "./content" -type f -exec sed -i 's/赞助二维码/reward-image/g' {} +

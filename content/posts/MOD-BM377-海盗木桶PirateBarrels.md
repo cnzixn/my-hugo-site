@@ -13,7 +13,7 @@ aliases = ["BM377"]
 ## 文件下载
 
 > [BM377] 海盗木桶PirateBarrels  
-{{< 网盘链接 "BM377" >}}  
+{{< pan "BM377" >}}  
 
 ---
 

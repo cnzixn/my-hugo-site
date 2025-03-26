@@ -13,7 +13,7 @@ aliases = ["BM373"]
 ## 文件下载
 
 > [BM373] 弹弓TheSlingshot  
-{{< 网盘链接 "BM373" >}}  
+{{< pan "BM373" >}}  
 
 ---
 
