@@ -22,7 +22,7 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 
 <!--more-->
 
-E﻿dit By CMS Test
+E﻿dit By CMS, need merge...
 
 ## Headings
 
