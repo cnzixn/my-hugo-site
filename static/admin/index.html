@@ -10,26 +10,6 @@
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-      // admin/custom.js
-CMS.registerEventListener({
-  onLogin: ({ user }) => {
-    // 即使管理员也隐藏状态切换控件
-    document.querySelectorAll('[data-testid="status-select"]').forEach(el => {
-      el.style.display = 'none';
-    });
-    
-  }
-});
-    </script>
+    <script src="admin2/custom.js"></script>
   </body>
 </html>
