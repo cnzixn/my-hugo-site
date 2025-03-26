@@ -1,33 +1,26 @@
-# when using the default proxy server port
-# local_backend: true
-
-# This line should *not* be indented
-publish_mode: editorial_workflow
+local_backend: true
 
 backend:
-  squash_merges: true
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
-  # open_authoring: true
+  branch: main
+  # name: github
+  # repo: cnzixn/my-hugo-site
+  squash_merges: true
+  open_authoring: true
 
-# These lines should *not* be indented
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+publish_mode: editorial_workflow
+
+media_folder: static/img
+public_folder: /img
+
+# 启用审稿流程
+editorial_workflow: true
 
 
-
-
-
-
-
-
-# 内容集合配置
 collections:
   - name: "posts"
     label: "文章"
     folder: "content/posts"
-    create: true
-    delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "标题", name: "title", widget: "string"}
@@ -37,11 +30,47 @@ collections:
       - {label: "别名", name: "aliases", widget: "list"}
       - {label: "评论", name: "comments", widget: "boolean"}
       - {label: "内容", name: "body", widget: "markdown"}
+    create: true
+    # delete: true
+    # 禁止直接发布
+    publish: false  
+    # 强制启用审稿流程
+    editorial_workflow: true  
+    workflow:
+      - label: '草稿'
+        name: 'draft'
+        # 允许普通用户删除自己的草稿
+        delete: true  
+        transitions:
+          - label: '提交审核'
+            name: 'submit_review'
+            to: 'in_review'
+            # 仅允许 draft → in_review
+            roles: ['guest']  # 未登录用户权限
+      - label: '审核中'
+        name: 'in_review'
+        transitions:
+          - label: '通过审核'
+            name: 'approve'
+            to: 'ready'
+            roles: ['editor']  # 仅编辑可操作
+          - label: '退回修改'
+            name: 'reject'
+            to: 'draft'
+            roles: ['editor']
+      - label: '就绪'
+        name: 'ready'
+        transitions:
+          - label: '发布'
+            name: 'publish'
+            to: 'published'
+            roles: ['admin']  # 仅管理员可最终发布
 
   - name: "pages"
     label: "其他"
     folder: "content"
     create: true
+    publish: false  # 普通用户不可直接发布
     slug: "{{slug}}"
     access:
       - role: "admin"

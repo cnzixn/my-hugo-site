@@ -22,3 +22,6 @@ git pull
 
 # 提交更新
 git add . ; git commit -m "Update main at $(date '+%Y-%m-%d %H:%M:%S')" ; git push -u origin main
+
+
+find "./content" -type f -exec sed -i 's/网盘链接/pan/g' {} +
