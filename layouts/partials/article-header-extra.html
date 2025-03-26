@@ -1,10 +1,15 @@
 <!--
     for user-side override
 -->
-<!--  -->
-<!-- <div class="article-meta"> -->
-  <!-- <span>作者: {{ .Params.author }}</span>　 -->
-  <!-- <span>日期: {{ .Date.Format "2006-01-02" }}</span>　 -->
-  <!-- 阅读: <span id="twikoo_visitors">0</span> -->
-<!-- </div> -->
 
+<div class="article-meta">
+  <span>作者: {{ .Params.author }}　</span>
+  <span>日期: {{ .Date.Format "2006-01-02" }}　</span>
+  <a class="edit-button"
+     title="编辑"
+     href="/cms/#/edit/{{ replace (replace .File.Path "content/" "") ".md" "" | safeURL }}"
+     target="_blank">📝编辑页面
+  </a>
+</div>
+
+<!-- 阅读: <span id="twikoo_visitors">0</span>-->
