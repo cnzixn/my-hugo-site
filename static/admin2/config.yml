@@ -29,13 +29,13 @@ collections:
       - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
-    publish: false  # 普通用户不可直接发布
+    publish: true  # 普通用户不可直接发布
 
   - name: "pages"
     label: "其他"
     folder: "content"
     create: true
-    publish: false  # 普通用户不可直接发布
+    publish: true  # 普通用户不可直接发布
     slug: "{{slug}}"
     # access:
       # - role: "admin"
