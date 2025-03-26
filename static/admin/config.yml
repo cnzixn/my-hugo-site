@@ -32,11 +32,21 @@ collections:
     create: true
     publish: false  # 普通用户不可直接发布
     workflow:
-      transitions:
-        - label: "提交审核"
-          name: "submit_review"
-          to: "in_review"
-          roles: ["admin", "editor"]  # 普通用户无此权限[citation:1]
+      - label: "草稿"
+        name: "draft"
+        delete: true
+        transitions:
+          - label: "提交审核"
+            name: "submit_review"
+            to: "in_review"
+            roles: ["admin", "editor"]  # 管理员也必须显式提交审核
+      - label: "审核中"
+        name: "in_review"
+        transitions:
+          - label: "批准发布"
+            name: "approve"
+            to: "published"
+            roles: ["admin"]  # 仅管理员可最终发布
 
   - name: "pages"
     label: "其他"
@@ -44,8 +54,8 @@ collections:
     create: true
     publish: false  # 普通用户不可直接发布
     slug: "{{slug}}"
-    access:
-      - role: "admin"
+    # access:
+      # - role: "admin"
     fields:
       - {label: "标题", name: "title", widget: "string"}
       - {label: "布局", name: "layout", widget: "string", default: "page"}
