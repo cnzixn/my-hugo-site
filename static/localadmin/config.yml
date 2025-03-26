@@ -8,6 +8,7 @@ backend:
   squash_merges: true
   open_authoring: true
 
+site_url: http://localhost
 
 media_folder: static/img
 public_folder: /img
