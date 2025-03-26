@@ -33,9 +33,9 @@ collections:
     create: true
     # delete: true
     # 禁止直接发布
-    publish: false  
+    publish: false
     # 强制启用审稿流程
-    editorial_workflow: true  
+    editorial_workflow: true
     workflow:
       - label: '草稿'
         name: 'draft'
@@ -60,6 +60,7 @@ collections:
             roles: ['editor']
       - label: '就绪'
         name: 'ready'
+        publish: true
         transitions:
           - label: '发布'
             name: 'publish'
