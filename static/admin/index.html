@@ -23,17 +23,17 @@
 
 CMS.registerEventListener({
   name: 'preSave',
-  handler: ({ entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+  handler: ({ author, entry }) => console.log(JSON.stringify({ author || "nil", data: entry.get('data') })),
 });
 
 CMS.registerEventListener({
   name: 'prePublish',
-  handler: ({ author, entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+  handler: ({ author, entry }) => console.log(JSON.stringify({ author || "nil", data: entry.get('data') })),
 });
 
 CMS.registerEventListener({
   name: 'preUnpublish',
-  handler: ({ author, entry }) => console.log(JSON.stringify({ author, data: entry.get('data') })),
+  handler: ({ author, entry }) => console.log(JSON.stringify({ author || "nil", data: entry.get('data') })),
 });
 
     </script>
