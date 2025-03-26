@@ -12,6 +12,6 @@ layout: main
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-
-
 管理员更改了主页
+
+普通用户更改了主页
