@@ -12,6 +12,4 @@ layout: main
 
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-
-
-近距离
+近距
