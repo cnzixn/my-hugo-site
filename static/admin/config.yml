@@ -22,11 +22,12 @@ collections:
     folder: "content/posts"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
+      - {label: "状态", name: "status", widget: "select", options: ["draft", "in_review", "published"]}
       - {label: "标题", name: "title"}
       - {label: "时间", name: "date", widget: "datetime"}
       - {label: "作者", name: "author"}
       - {label: "标签", name: "tags", widget: "list"}
-      - {label: "别名", name: "aliases", widget: "list"}
+      - {label: "短链", name: "aliases", widget: "list"}
       - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
