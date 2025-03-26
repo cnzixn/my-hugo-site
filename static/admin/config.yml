@@ -23,7 +23,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       # - {label: "状态", name: "status", widget: "select", options: ["draft", "in_review", "published"]}
-      - {label: "标题", name: "title"}
+      - {label: "标题2", name: "title"}
       - {label: "时间", name: "date", widget: "datetime"}
       - {label: "作者", name: "author"}
       - {label: "标签", name: "tags", widget: "list"}
@@ -31,7 +31,11 @@ collections:
       - {label: "评论", name: "comments"}
       - {label: "内容", name: "body", widget: "markdown"}
     create: true
-    publish: ["admin"]
+    publish:
+      roles:
+        - admin
+      action: publish
+      message: "Published by {{user.login}}"
 
   - name: "pages"
     label: "其他"
