@@ -75,7 +75,7 @@ theme = "xcode"
 darkTheme = "xcode-dark"  # apply this theme in dark mode
 
 [params.share]
-enable = true
+enable = false
 addThisId = ""
 inlineToolId = ""
 
@@ -114,3 +114,16 @@ url = "/web-shop/"
   icp = ""     # example: 粤ICP备20056596号-1
   gongan = ""  # example: 粤公网安备 44030502005645号
   code = ""    # example: 44030502005645
+
+
+# 其他配置项省略...
+
+[params.profile]
+  enable = true
+  avatar = "/avatar.jpg"  # 假设头像路径是这个，你需要替换为实际路径
+  name = "张三"
+  bio = "张三是一位技术爱好者，对编程和写作有着浓厚的兴趣。"
+  github = "zhangsan-github"
+  docker = "zhangsan-docker"
+  twitter = "zhangsan-twitter"
+  email = "zhangsan@example.com"

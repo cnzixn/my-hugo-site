@@ -43,4 +43,3 @@ collections:
       # - {label: "布局", name: "layout", widget: "string", default: "page", hide: true}
       # - {label: "内容", name: "body", widget: "markdown"}
 
-

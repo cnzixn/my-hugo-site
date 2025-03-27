@@ -1,13 +1,13 @@
 ---
+file: how-to-edit
 title: 文章 - 怎么编辑？
 date: 2025-03-26T18:17:00.000Z
-author: Bny
+author: bny
 tags:
   - 资料
 aliases:
   - edit
 comments: "false"
-file: how-to-edit
 ---
 > 本文介绍如何编辑文章。
 

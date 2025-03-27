@@ -18,7 +18,7 @@ aliases = ["guide"]
 [[框架]](#框架)：BMXXXX.123~133.ZIP  
 [[模组]](#模组)：BM035.人物.千年狐.ZIP  
 
-{{< bilibili BV1k8UFYAEjq >}}
+{{< bili BV1k8UFYAEjq >}}
 
 ---
 
