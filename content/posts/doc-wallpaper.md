@@ -15,7 +15,7 @@ comments = false
 ### 主界面
 
 左下角，新增两个按钮，用于切换壁纸。
-{{< img "images/posts/P4fBhA3wmieFr7R.webp" >}}
+{{< img "img/P4fBhA3wmieFr7R.webp" >}}
 
 ---
 
@@ -26,10 +26,10 @@ comments = false
 选一个喜欢的壁纸，选择 1920*1080 ，我下载的是虞姬，命名为“yuji.png”。(图片大小需根据手机屏幕去剪裁，否则会有拉伸变形)  
 
 原图
-{{< img "images/posts/P4fBhA3wmieFr7R.webp" >}}
+{{< img "img/P4fBhA3wmieFr7R.webp" >}}
 
 游戏内壁纸预览  
-{{< img "images/posts/tBLPGvNRxAsuQlq.webp" >}}
+{{< img "img/tBLPGvNRxAsuQlq.webp" >}}
 
 ---
 
@@ -38,7 +38,7 @@ comments = false
 > 用这个制作贴图：[[饥荒动画工具]](/redirect?target=https://dont-starve-anim-tool.pages.dev/src/TexTool/)  
 
 将下载的壁纸图片转换为“游戏贴图”，这里保存为“yuji.xml”和“yuji.tex”。
-{{< img "images/posts/mB69v8zgZonOEkG.webp" >}}
+{{< img "img/mB69v8zgZonOEkG.webp" >}}
 
 ---
 
