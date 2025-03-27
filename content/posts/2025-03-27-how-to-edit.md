@@ -36,7 +36,6 @@ file: how-to-edit
 * ← (返回)
 * Save(保存)
 * Status: Draft(状态: 草稿)
-* <span style="color:red;">Delete unpublished entry</span>(删除)
 
 元数据：
 * 保存，文件名(不带".md")。
