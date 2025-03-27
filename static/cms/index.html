@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>[class*="WorkflowListContainer"] > div:nth-child(3),[class*="e1d2l9mo0"] > div:nth-child(3){display:none !important}html body div:nth-child(1) div:nth-child(2) div div:nth-child(1) div:nth-child(1) div:nth-child(1) div:nth-child(1) div ul div:nth-child(3){display:none;}</style>
+    <!-- 隐藏 Ready 分类 -->
+    <style>[class*="WorkflowListContainer"] > div:nth-child(3),[class*="e1d2l9mo0"] > div:nth-child(3){display:none !important}</style>
+    <!-- 隐藏 Ready 选项 -->
+    <style>
+    /* 基于文本内容的安全选择器（推荐） */
+    #nc-root [class*="Toolbar"] div[role="option"]:has(span:contains("Ready")) {
+      display: none !important;
+    }
+    </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
@@ -14,3 +22,4 @@
     <script src="custom.js"></script>
   </body>
 </html>
+
