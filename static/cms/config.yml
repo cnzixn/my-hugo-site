@@ -22,11 +22,7 @@ collections:
     fields:
       - { label: "标题", name: "title"}
       - { label: "时间", name: "date", widget: "datetime"}
-      # - { label: "作者", name: "author", default: "bny"}
-      # 自动记录最后编辑者
-      - { name: "last_editor", label: "Last Editor", widget: "hidden", default: "{{user.login}}" }
-      # 自动记录创建者
-      - { name: "author", label: "Author", widget: "hidden", default: "{{user.login}}", required: false }
+      - { label: "作者", name: "author", default: "bny"}
       - { label: "标签", name: "tags", widget: "list"}
       # - { label: "短链", name: "aliases", widget: "list"}
       # - { label: "讨论", name: "comments", default: "true"}
