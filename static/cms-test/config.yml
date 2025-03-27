@@ -58,11 +58,6 @@ collections:
       - {label: "短链", name: "aliases", widget: "list"}
       - {label: "评论区", name: "comments", default: "true"}
       - {label: "内容", name: "body", widget: "markdown"}
-      - name: "seo_keywords"
-        label: "SEO 关键词"
-        widget: "string"
-        condition:
-          role: ["admin"]  # 仅管理员可见
     create: true
     # publish: false  # 普通用户不可直接发布
     # 权限控制
