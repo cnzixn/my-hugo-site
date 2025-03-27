@@ -1,16 +1,23 @@
 <section class="article header">
     {{- if and (not (eq .Params.single true)) -}}
-    <h1 class="article title">
-      {{- .Title | safeHTML -}}
-    </h1>
+    <h1 class="article title">{{- .Title | safeHTML -}}</h1>
+    <div class="article-meta">
+      <span>作者: {{ .Params.author }}　</span>
+      <span>日期: {{ .Date.Format "2006-01-02" }}　</span>
+      <a class="edit-button"
+         title="编辑"
+         href="/cms/#/edit/{{ replace (replace .File.Path "content/" "") ".md" "" | safeURL }}"
+         target="_blank">📝编辑页面
+      </a>
+    </div>
     {{- end -}}
-    {{- $dateFormat := site.Params.dateFormat -}}
-    {{- if not $dateFormat -}}{{- $dateFormat = "2006-01-02" -}}{{- end -}}
-    {{- $lastmodFormat := "" -}}
-    {{- $lastmod := .Lastmod -}}
-    {{- if $lastmod -}}
-        {{- $lastmodFormat = $lastmod.Format $dateFormat -}}
-    {{- end -}}
+    <!-- {{- $dateFormat := site.Params.dateFormat -}} -->
+    <!-- {{- if not $dateFormat -}}{{- $dateFormat = "2006-01-02" -}}{{- end -}} -->
+    <!-- {{- $lastmodFormat := "" -}} -->
+    <!-- {{- $lastmod := .Lastmod -}} -->
+    <!-- {{- if $lastmod -}} -->
+        <!-- {{- $lastmodFormat = $lastmod.Format $dateFormat -}} -->
+    <!-- {{- end -}} -->
     <!-- {{- if .Date -}} -->
         <!-- {{- $dateFormat := .Date.Format $dateFormat -}} -->
         <!-- <p class="article date">{{- $dateFormat -}} -->
