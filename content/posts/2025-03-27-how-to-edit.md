@@ -7,6 +7,7 @@ tags:
 aliases:
   - edit
 comments: "false"
+file: how-to-edit
 ---
 > 本文介绍如何编辑文章。
 
@@ -58,5 +59,9 @@ comments: "false"
 ### 其他功能
 
 没提到的功能，请自行探索...
+
+---
+
+{{< reward-button >}}
 
 - - -
