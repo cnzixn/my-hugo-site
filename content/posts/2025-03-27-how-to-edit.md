@@ -1,8 +1,13 @@
 ---
 file: how-to-edit
 title: 文章 - 怎么编辑？
+<<<<<<< HEAD
 date: 2025-03-26T18:17:00.000Z
 author: bny
+=======
+date: 2025-03-03T02:17:00.000Z
+author: Bny
+>>>>>>> 1bd0fcc759a93e2e3e20f2ccdb2e9cdc98efaec3
 tags:
   - 资料
 aliases:
@@ -36,13 +41,12 @@ comments: "false"
 * ← (返回)
 * Save(保存)
 * Status: Draft(状态: 草稿)
-* <span style="color:red;">Delete unpublished entry</span>(删除)
 
 元数据：
-
-* 标题，
-* 时间，
-* 作者，
+* 保存，文件名(不带".md")。
+* 标题，会显示在文章页面。
+* 时间，文章发布/编辑时间。
+* 作者，可以有多个作者。
 * 标签，多个标签用","(英文逗号)分隔开。
 
 内容框：
