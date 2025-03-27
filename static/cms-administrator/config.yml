@@ -30,7 +30,12 @@ collections:
       - {label: "保存", name: "file", default: {{filename}}}
       - {label: "标题", name: "title"}
       - {label: "时间", name: "date", widget: "datetime"}
-      - {label: "作者", name: "author", default: "bny"}
+      # - {label: "作者", name: "author", default: "bny"}
+      
+      # 自动记录最后编辑者
+      - { name: "last_editor", label: "Last Editor", default: "{{user.login}}" }
+      # 自动记录创建者
+      - { name: "author", label: "Author", default: "{{user.login}}", required: false }
       # - label: "作者"
         # name: "author"
         # widget: "relation"
