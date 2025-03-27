@@ -12,8 +12,7 @@ public_folder: /img
 backend:
   name: git-gateway
   branch: main
-  # name: github
-  # repo: cnzixn/my-hugo-site
+  repo: cnzixn/my-hugo-site
   squash_merges: true
   open_authoring: true
 
@@ -33,6 +32,10 @@ collections:
     label: "文章页面"
     folder: "content/posts"
     create: true
+    access:
+      create: administrator, editor
+      update: administrator, editor
+      delete: administrator
     slug: "{{year}}-{{month}}-{{day}}-{{file}}"
     # summary: "{{filename}} - {{commit_author}} - {{commit_date}}"
     fields:
@@ -50,9 +53,11 @@ collections:
     label: "其他页面"
     folder: "content"
     create: true
-    slug: "{{file}}"
     access:
-      - role: "admin"
+      create: administrator
+      update: administrator
+      delete: administrator
+    slug: "{{file}}"
     fields:
       - {label: "保存", name: "file"}
       - {label: "标题", name: "title", widget: "string"}
