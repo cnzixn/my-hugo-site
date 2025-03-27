@@ -5,10 +5,10 @@
     <style>[class*="WorkflowListContainer"] > div:nth-child(3),[class*="e1d2l9mo0"] > div:nth-child(3){display:none !important}</style>
     <!-- 隐藏 Ready 选项 -->
     <style>
-    /* 基于文本内容的安全选择器（推荐） */
-    #nc-root [class*="Toolbar"] div[role="option"]:has(span:contains("Ready")) {
-      display: none !important;
-    }
+    /* 精确防御选择器（应对哈希值变化） */
+#nc-root [class*="AppMainContainer"] [class*="ToolbarContainer"] [class*="ToolbarSectionMain"] [class*="ToolbarSubSectionFirst"] > div > div > ul > div:nth-child(3) {
+  display: none !important;
+}
     </style>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
