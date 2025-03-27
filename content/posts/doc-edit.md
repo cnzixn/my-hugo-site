@@ -1,13 +1,7 @@
 ---
-file: how-to-edit
 title: 文章 - 怎么编辑？
-<<<<<<< HEAD
 date: 2025-03-26T18:17:00.000Z
 author: bny
-=======
-date: 2025-03-03T02:17:00.000Z
-author: Bny
->>>>>>> 1bd0fcc759a93e2e3e20f2ccdb2e9cdc98efaec3
 tags:
   - 资料
 aliases:
