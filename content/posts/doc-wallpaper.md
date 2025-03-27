@@ -26,7 +26,7 @@ comments = false
 选一个喜欢的壁纸，选择 1920*1080 ，我下载的是虞姬，命名为“yuji.png”。(图片大小需根据手机屏幕去剪裁，否则会有拉伸变形)  
 
 原图
-{{< img "img/P4fBhA3wmieFr7R.webp" >}}
+{{< img "img/v4MHC3xUAr8FyWt.webp" >}}
 
 游戏内壁纸预览  
 {{< img "img/tBLPGvNRxAsuQlq.webp" >}}
