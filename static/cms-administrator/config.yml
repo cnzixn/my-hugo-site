@@ -1,4 +1,13 @@
+# /cms-administrator/config.yml
+
 local_backend: true
+
+locale: "zh_" # 语言环境
+
+publish_mode: editorial_workflow
+
+media_folder: static/img
+public_folder: /img
 
 backend:
   name: git-gateway
@@ -8,10 +17,8 @@ backend:
   squash_merges: true
   open_authoring: true
 
-media_folder: static/img
-public_folder: /img
 
-publish_mode: editorial_workflow
+
 
 collections:
   - name: "posts"
@@ -28,19 +35,35 @@ collections:
       # - {label: "短链", name: "aliases", widget: "list"}
       # - {label: "讨论", name: "comments", default: "true"}
       - {label: "内容", name: "body", widget: "markdown"}
-    publish: false  # 普通用户不可发布
-
-  # - name: "pages"
-    # label: "其他"
-    # folder: "content"
-    # create: true
     # publish: false  # 普通用户不可直接发布
-    # slug: "{{slug}}"
-    # # access:
-      # # - role: "admin"
-    # fields:
-      # - {label: "标题", name: "title", widget: "string"}
-      # - {label: "布局", name: "layout", widget: "string", default: "page", hide: true}
-      # - {label: "内容", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "其他"
+    folder: "content"
+    create: true
+    # publish: false  # 普通用户不可直接发布
+    slug: "{{file}}"
+    # access:
+      # - role: "admin"
+    fields:
+      - {label: "保存", name: "file"}
+      - {label: "标题", name: "title", widget: "string"}
+      - {label: "布局", name: "layout", widget: "string", default: "page"}
+      - {label: "内容", name: "body", widget: "markdown"}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
