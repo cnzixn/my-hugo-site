@@ -1,7 +1,7 @@
 <!--
     for user-side override
 -->
-
+{{- if and (not (eq .Params.single true)) -}}
 <div class="article-meta">
   <span>作者: {{ .Params.author }}　</span>
   <span>日期: {{ .Date.Format "2006-01-02" }}　</span>
@@ -11,5 +11,5 @@
      target="_blank">📝编辑页面
   </a>
 </div>
-
+{{- end -}}
 <!-- 阅读: <span id="twikoo_visitors">0</span>-->
