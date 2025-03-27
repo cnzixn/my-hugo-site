@@ -30,15 +30,16 @@ collections:
       - {label: "保存", name: "file", default: {{filename}}}
       - {label: "标题", name: "title"}
       - {label: "时间", name: "date", widget: "datetime"}
-      - label: "作者"
-        name: "author"
-        widget: "relation"
-        collection: "users"  # 关联用户集合
-        searchFields: ["username", "display_name"]  # 搜索字段
-        valueField: "username"  # 实际存储值
-        displayFields: ["display_name"]  # 界面显示字段
-        required: false
-        default: "bny"  # 默认用户
+      - {label: "作者", name: "author", default: "bny"}
+      # - label: "作者"
+        # name: "author"
+        # widget: "relation"
+        # collection: "users"  # 关联用户集合
+        # searchFields: ["username", "display_name"]  # 搜索字段
+        # valueField: "username"  # 实际存储值
+        # displayFields: ["display_name"]  # 界面显示字段
+        # required: false
+        # default: "bny"  # 默认用户
       - {label: "标签", name: "tags", widget: "list"}
       - {label: "短链", name: "aliases", widget: "list"}
       - {label: "讨论", name: "comments", default: "true"}
