@@ -1,4 +1,4 @@
-
+=
 {{- $paginator := . -}}
 {{- if gt $paginator.TotalPages 1 -}}
 {{- $current := $paginator.PageNumber -}}
@@ -16,7 +16,7 @@
   {{- $end = math.Min $total $windowSize -}}
 {{- else if gt $end $total -}}
   {{- $end = $total -}}
-  {{- $start = math.Max 1 (sub $end $windowSize 1) -}}
+  {{- $start = math.Max 1 (sub $end (sub $windowSize 1)) -}}
 {{- end -}}
 
 
