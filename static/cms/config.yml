@@ -20,7 +20,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{file}}"
     fields:
-      - {label: "保存", name: "file"}
+      - {label: "保存", name: "file", default: {{filename}}}
       - {label: "标题", name: "title"}
       - {label: "时间", name: "date", widget: "datetime"}
       - {label: "作者", name: "author", default: "bny"}
