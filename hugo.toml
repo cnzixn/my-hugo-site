@@ -118,12 +118,12 @@ url = "/web-shop/"
 
 # 其他配置项省略...
 
-[params.profile]
-  enable = true
-  avatar = "/avatar.jpg"  # 假设头像路径是这个，你需要替换为实际路径
-  name = "张三"
-  bio = "张三是一位技术爱好者，对编程和写作有着浓厚的兴趣。"
-  github = "zhangsan-github"
-  docker = "zhangsan-docker"
-  twitter = "zhangsan-twitter"
-  email = "zhangsan@example.com"
+# [params.profile]
+  # enable = true
+  # avatar = "/img/avatar.jpg"  # 假设头像路径是这个，你需要替换为实际路径
+  # name = "张三"
+  # bio = "张三是一位技术爱好者，对编程和写作有着浓厚的兴趣。"
+  # github = "zhangsan-github"
+  # docker = "zhangsan-docker"
+  # twitter = "zhangsan-twitter"
+  # email = "zhangsan@example.com"
