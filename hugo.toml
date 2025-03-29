@@ -1,6 +1,6 @@
 baseURL = "https://b.bxq.me"
-canonifyURLs = true
-relativeURLs = false
+canonifyURLs = true # 页面用相对路径
+relativeURLs = true # 启用相对路径
 
 title = ""
 theme = "hugo-notepadium"
