@@ -1,4 +1,7 @@
 baseURL = "https://b.bxq.me"
+canonifyURLs = true
+relativeURLs = false
+
 title = ""
 theme = "hugo-notepadium"
 copyright = "©2025 兔人协会"
