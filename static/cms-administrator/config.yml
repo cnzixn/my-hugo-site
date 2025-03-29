@@ -2,7 +2,7 @@
 
 local_backend: true
 
-locale: "zh_" # 语言环境
+# locale: "zh_" # 语言环境
 
 publish_mode: editorial_workflow
 
