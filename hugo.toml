@@ -1,7 +1,6 @@
 # baseURL = "https://b.bxq.me"
 # relativeURLs = true # 启用相对路径
 # canonifyURLs = true # 页面用对决路径
-
 title = ""
 theme = "hugo-notepadium"
 copyright = "©2025 兔人协会"
