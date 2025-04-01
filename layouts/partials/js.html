@@ -27,12 +27,16 @@
         }
 
         copybutton.addEventListener('click', (cb) => {
+            // 去除整段代码首尾的空格（但保留内部的空格和换行）
+            const text = codeblock.textContent.trim();
+
             if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
+                navigator.clipboard.writeText(text);
                 copyingDone();
                 return;
             }
 
+            // 兼容旧浏览器的复制方式（可能无法去除空格）
             const range = document.createRange();
             range.selectNodeContents(codeblock);
             const selection = window.getSelection();

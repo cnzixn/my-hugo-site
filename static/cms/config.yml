@@ -13,6 +13,8 @@ public_folder: /img
 
 publish_mode: editorial_workflow
 
+styles:
+  - "/admin/custom.css"  # 指向你的 CSS 文件路径
 
 collections:
   - name: "posts"

@@ -1,0 +1,110 @@
+
+
+
+
+
+
+
+
+
+
+
+/* 通用移动端优化 */
+@media screen and (max-width: 768px) {
+  /* 主容器调整 */
+  .nc-root, .nc-githubEditor-root {
+    padding: 10px;
+  }
+  
+  /* 顶部导航栏优化 */
+  .nc-topBar-root {
+    padding: 8px 10px;
+  }
+  
+  .nc-topBar-left {
+    flex-wrap: wrap;
+  }
+  
+  /* 侧边栏优化 */
+  .nc-sidebar-root {
+    width: 100%;
+    position: static;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .nc-workflow-container {
+    flex-direction: column;
+  }
+  
+  /* 编辑器区域优化 */
+  .nc-editorLayout-container {
+    flex-direction: column;
+  }
+  
+  .nc-editorLayout-editor {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .nc-editorLayout-preview {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  /* 表单元素优化 */
+  .nc-controlPane-control {
+    margin-bottom: 15px;
+  }
+  
+  .nc-control-label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .nc-control-input {
+    width: 100%;
+    font-size: 16px; /* 增大字体方便触摸 */
+  }
+  
+  /* 按钮优化 */
+  .nc-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  /* 集合列表优化 */
+  .nc-collectionPage-container {
+    padding: 10px;
+  }
+  
+  .nc-collectionPage-list {
+    grid-template-columns: repeat(1, 1fr); /* 单列显示 */
+  }
+  
+  /* 编辑器工具栏优化 */
+  .nc-editorToolbar-root {
+    flex-wrap: wrap;
+    padding: 5px;
+  }
+  
+  .nc-editorToolbar-button {
+    margin: 3px;
+    padding: 5px 8px;
+  }
+  
+  /* 预览区域优化 */
+  .nc-previewPane-frame {
+    min-height: 300px;
+  }
+  
+  /* 登录页面优化 */
+  .nc-githubAuthenticationPage-root {
+    padding: 20px 10px;
+  }
+  
+  .nc-githubAuthenticationPage-button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}

@@ -1,11 +1,13 @@
-+++
-title = "存档 - 怎么备份？"
-date = "2025-02-01"
-author = "Bny"
-tags = ["资料"]
-aliases = ["slots"]
-comments = false
-+++
+---
+title: 存档 - 怎么备份？
+date: 2025-02-01
+author: Bny
+tags:
+  - 资料
+aliases:
+  - slots
+comments: false
+---
 
 > 本文介绍如何导入、导出存档文件。
 
@@ -22,15 +24,23 @@ comments = false
 
 ### 一、“内部”与“外部”目录  
 
-内部：/data/data/......  
+框架支持添加到“不同”版本，请注意这里<kbd>包名</kbd>有变化。
+
+内部：<kbd>/data/data/\<package\>/</kbd>
+```lua
+/data/data/hei.kleientertainment.doNotStarveShipwrecked/
+```
 ![图片](/img/o7ElukfGOHILdMa.webp)  
 
-外部：/sdcard/Android/data/......  
+外部：<kbd>/sdcard/Android/data/\<package\>/</kbd>  
+```lua
+/sdcard/Android/data/hei.kleientertainment.doNotStarveShipwrecked/
+```
 ![图片](/img/6NeRqFsbrIfmX7u.webp)  
 
-注：“外部”文件夹可能“无权访问、无权操作”，推荐使用“MT管理器”+“Shizuku”获取操作权限。  
-
-手Q下载的文件，大家应该都会弄，有看过相关视频教程吧。这里的存档文件与之类似，简单说一下：MT管理器->设置->安装Shiziku->打开Shiziku(内部自带教程)。  
+>获取权限
+- “外部”文件夹可能“无权访问、无权操作”，推荐使用“MT管理器”+“Shizuku”获取操作权限。  
+- 手机QQ下载的文件，大家应该都会弄。这里的存档文件与之类似，简单说一下流程：MT管理器->设置->安装Shiziku->打开Shiziku(内部自带教程)。  
 ![图片](/img/tAOYdK1EyqxDl28.webp)  
 
 
