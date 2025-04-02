@@ -36,7 +36,7 @@ collections:
     # summary: "{{filename}} - {{commit_author}} - {{commit_date}}"
     fields:
       - {label: "标题", name: "title"}
-      - {label: "时间", name: "date", widget: "date", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD"}
+      - {label: "时间", name: "date", widget: "string", pattern: ["\\d{4}-\\d{2}-\\d{2}", "年月日，必须是 YYYY-MM-DD 格式"] }
       - {label: "作者", name: "author", default: "bny"}
       - {label: "标签", name: "tags", widget: "list"}
       - {label: "短链", name: "aliases", widget: "list", required: false}
