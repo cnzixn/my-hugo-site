@@ -4,6 +4,7 @@ single: true
 layout: "main"
 ---
 
+
 <div class="button-container">
   <a href="/posts/guide" class="button">新人指路</a>
   <a href="/redirect?target=https://jq.qq.com/?k=5WukPKv" class="button">加入群聊</a>

@@ -2,7 +2,7 @@
 
 
 
-cd /sdcard/acode/web1/
+cd /sdcard/acode/*site/
 
 rm -rf public; hugo server -w --minify --noBuildLock 
 

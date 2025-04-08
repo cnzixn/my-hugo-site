@@ -57,7 +57,7 @@ search = true
 # mainSections = ["posts"]
 
 [params.comments]
-enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
 # [params.comments.utterances]
 # 暂未使用
@@ -107,9 +107,9 @@ url = "/search"
 title = "关于"
 url = "/about"
 
-[[params.nav.custom]]
-title = "小店"
-url = "/web-shop/"
+# [[params.nav.custom]]
+# title = "小店"
+# url = "/web-shop/"
 
 # for chinese
 [params.beian]
