@@ -16,7 +16,7 @@ aliases:
 ## 文件下载
 
 > PE 新辅助合集 2.6.3  
-**蓝奏云盘**: [[点击下载]](/redirect?target=https://xfzdaxsg.lanzouw.com/b0crbhuzi) 密码：<mark>dax3</mark>
+**蓝奏云盘**: [[点击下载]](/redirect?target=https://xfzdaxsg.lanzouw.com/b0crbhuzi) 密码: <mark>dax3</mark>
 
 ---
 
@@ -124,10 +124,9 @@ ALT+鼠标 点击灭火器 查看他的灭火范围 （这是为了更好的兼�
 https://b23.tv/wd1OQLI
 作者：樂卟嘶屬（口丫口）  
 
+----------------------------------------------------------------------
 
-————————————————————————————————————————————————————
-
-<kbd>...这里有瓜，去原文档查看吧...</kbd>
+......
 
 
 ```
