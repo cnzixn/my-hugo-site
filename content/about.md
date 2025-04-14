@@ -63,10 +63,12 @@ layout: post
 
 #### 五、联系我们
 
+　频道: [[兔人协会]](/redirect?target=https://qun.qq.com/qqweb/qunpro/share?inviteCode=2l2COvdUN0S)  
+
+　Q群: [[614255348]](/redirect?target=https://jq.qq.com/?k=5WukPKv)  
+
+　Q群: [[696529613]](/redirect?target=https://qm.qq.com/q/gHa2tzT8Pe)  
+
 　B站: [[辛大・主页]](/redirect?target=https://b23.tv/kf3yuSv)  
-
-　Q群: [[饥荒手游模组｜你是好人]](/redirect?target=https://jq.qq.com/?k=5WukPKv)  
-
-　频道: [[饥荒手游模组｜兔人协会]](/redirect?target=https://qun.qq.com/qqweb/qunpro/share?inviteCode=2l2COvdUN0S)  
 
 ---
