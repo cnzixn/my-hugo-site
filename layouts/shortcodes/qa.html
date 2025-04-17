@@ -1,0 +1,27 @@
+<!-- layouts/shortcodes/qa.html -->
+<div class="qq-qa-container">
+    <!-- 提问方 -->
+    <div class="msg-group question">
+        <img src='http://q1.qlogo.cn/g?b=qq&nk={{ .Get "U" | default "2854196310" }}&s=100'
+             class="qq-avatar" 
+             alt="{{ .Get "ua" }} QQ头像"
+             onerror="this.src='http://q1.qlogo.cn/g?b=qq&nk=2854196310&s=100'">
+        <div class="msg-content">
+            <div class="username">群友</div>
+            <div class="bubble q">{{ .Get "Q" | markdownify }}</div>
+        </div>
+    </div>
+
+    <!-- 回答方 -->
+    <div class="msg-group answer">
+        <img src='http://q1.qlogo.cn/g?b=qq&nk={{ .Get "ub" | default "2854196306" }}&s=100'
+             class="qq-avatar" 
+             alt="{{ .Get "ub" }} QQ头像"
+             onerror="this.src='http://q1.qlogo.cn/g?b=qq&nk==2854196306&s=100'">
+        <div class="msg-content">
+            <div class="username">小冰</div>
+            <div class="bubble a">{{ .Get "A" | markdownify }}</div>
+        </div>
+    </div>
+</div>
+

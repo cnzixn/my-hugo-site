@@ -24,7 +24,7 @@
 }
 /* 隐藏页脚的样式 */
 #footer.hidden {
-  transform: translateY(100%); /* 向下移出视图 */
+  transform: translateY(98%); /* 向下移出视图 */
 }
 
 

@@ -3,7 +3,8 @@
 # canonifyURLs = true # 页面用对决路径
 title = ""
 theme = "hugo-notepadium"
-copyright = "©2025 兔人协会"
+copyright = "©2025 兔人协会" # <a href='https://github.com/cnzixn/my-hugo-site' >Github</a>
+
 
 languageCode = "zh-cn"
 hasCJKLanguage = true
@@ -50,7 +51,7 @@ style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: bas
 dateFormat = ""  # if unset, default is "2006-01-02" Monday, January 2, 2006
 logo = "/img/logo.webp"  # if you have a logo png
 slogan = ""  # 100% JavaScript-free
-license = ""  # CC License
+license = "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1' >CC BY-NC-SA 4.0</a>"  # CC License
 fullRss = true # Puts entire HTML post into rss "description" tag. If unset, default is false.
 ipv6ready = false # Show IPV6Ready logo on footer.
 search = true
@@ -102,6 +103,10 @@ url = "/tags/日志"
 [[params.nav.custom]]
 title = "搜索"
 url = "/search"
+
+[[params.nav.custom]]
+title = "问答"
+url = "/faq"
 
 [[params.nav.custom]]
 title = "关于"
