@@ -35,4 +35,30 @@ document.addEventListener('keydown', function(e) {
 
 
 
+// 处理首次加载的链接
+processExistingLinks();
 
+// 监听异步加载内容
+new MutationObserver((mutations) => {
+  mutations.forEach((mutation) => {
+    if (mutation.addedNodes.length) {
+      processExistingLinks();
+    }
+  });
+}).observe(document.documentElement, {
+  childList: true,
+  subtree: true
+});
+
+function processExistingLinks() {
+  document.querySelectorAll('a[href^="http"]').forEach(link => {
+    const isInternal = link.hostname === location.hostname;
+    const isAnchor = link.pathname.startsWith('#');
+    
+    if (!isInternal && !isAnchor) {
+      const encoded = encodeURIComponent(link.href);
+      link.href = `/redirect?target=${encoded}`;
+      link.setAttribute('target', '_blank');
+    }
+  });
+}

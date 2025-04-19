@@ -16,7 +16,7 @@ aliases:
 ## 文件下载
 
 > 哈姆雷特房子 home改1.95  
-**123 云盘**: [[点击下载]](/redirect?target=https://www.123pan.com/s/6DetVv-Rm1Kv.html) 密码: 暂无
+**123 云盘**: [[点击下载]](https://www.123pan.com/s/6DetVv-Rm1Kv.html) 密码: 暂无
 
 ---
 

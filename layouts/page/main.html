@@ -1,7 +1,9 @@
 {{ define "main" }}
   {{- if .Content -}}
+  {{ $processedContent := .Content | replaceRE `(<a\s+[^>]*href=")(https?:[^"]+)"` "${1}/redirect?target=${2}\"" }}
   <article class="article markdown-body">
-      {{- .Content -}}
+      {{ $processedContent | safeHTML }}
   </article>
   {{- end -}}
 {{ end }}
+

@@ -1,7 +1,9 @@
 {{- if or (eq .Params.comments true) (and (ne .Params.comments false) (eq site.Params.comments.enable true)) -}}
 <div id="tcomment"></div>
 <script src="{{ (resources.Get "js/twikoo.all.min.js" | minify | fingerprint).RelPermalink }}"></script>
-<script> twikoo.init({ envId: 'https://bxq.netlify.app/.netlify/functions/twikoo', el: '#tcomment', }) </script>
+<script>
+twikoo.init({ envId: 'https://bxq.netlify.app/.netlify/functions/twikoo', el: '#tcomment', })
+</script>
 </div>
 {{- end -}}
 

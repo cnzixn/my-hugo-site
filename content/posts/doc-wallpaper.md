@@ -21,7 +21,7 @@ comments = false
 
 ### 下载壁纸
 
-> 从这里下载壁纸：[[王者荣耀壁纸]](/redirect?target=https://pvp.qq.com/web201605/wallpaper.shtml)
+> 从这里下载壁纸：[[王者荣耀壁纸]](https://pvp.qq.com/web201605/wallpaper.shtml)
 
 选一个喜欢的壁纸，选择 1920*1080 ，我下载的是虞姬，命名为“yuji.png”。(图片大小需根据手机屏幕去剪裁，否则会有拉伸变形)  
 
@@ -35,7 +35,7 @@ comments = false
 
 ### 贴图转换
 
-> 用这个制作贴图：[[饥荒动画工具]](/redirect?target=https://dont-starve-anim-tool.pages.dev/src/TexTool/)  
+> 用这个制作贴图：[[饥荒动画工具]](https://dont-starve-anim-tool.pages.dev/src/TexTool/)  
 
 将下载的壁纸图片转换为“游戏贴图”，这里保存为“yuji.xml”和“yuji.tex”。
 ![图片](/img/mB69v8zgZonOEkG.webp)

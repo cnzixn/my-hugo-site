@@ -1,0 +1,13 @@
+<!-- 判断是否为外链 -->
+{{ $url := .Destination }}
+{{ $isExternal := hasPrefix $url "http" }}
+
+<a href="{{ if $isExternal }}
+    /redirect?target={{ $url | safeURL }}
+  {{ else }}
+    {{ $url }}
+  {{ end }}"
+  {{ with .Title }}title="{{ . }}"{{ end }}
+  {{ if $isExternal }}target="_blank" rel="noopener"{{ end }}>
+  {{ .Text | safeHTML }}
+</a>

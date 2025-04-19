@@ -49,7 +49,7 @@ unsafe = true  # enable raw HTML in Markdown
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = ""  # if unset, default is "2006-01-02" Monday, January 2, 2006
-logo = "/img/logo.webp"  # if you have a logo png
+logo = "http://q1.qlogo.cn/g?b=qq&nk=1163650990&s=100"  # if you have a logo png
 slogan = ""  # 100% JavaScript-free
 license = "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1' >CC BY-NC-SA 4.0</a>"  # CC License
 fullRss = true # Puts entire HTML post into rss "description" tag. If unset, default is false.
@@ -58,7 +58,7 @@ search = true
 # mainSections = ["posts"]
 
 [params.comments]
-enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
+enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
 # [params.comments.utterances]
 # 暂未使用

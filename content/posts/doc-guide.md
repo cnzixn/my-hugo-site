@@ -31,7 +31,7 @@ comments: "false"
 > 　MT管理器 是一款 Android 平台的文件管理 & 逆向修改工具，操作简单、功能强大。  
 > 　某些网盘“在线解压”导致文件失效，后续会将文件后缀“.ZIP”改为“.BM”，也有可能改成其他。  
 > 　打开“.BM”文件的流程：使用“MT管理器” - ->  点击“.BM”文件 - -> 长按“浏览压缩包” - -> 点击“设为默认打开方式”  
-> **官方网站**: [[点击进入]](/redirect?target=https://mt2.cn)  
+> **官方网站**: [[点击进入]](https://mt2.cn)  
 
 - - -
 
@@ -39,7 +39,7 @@ comments: "false"
 
 推荐 1.33.4 版本  
 　船难(Shipwrecked) 是 Klei 和 CAPY Games 联合开发的一款 DLC 扩展包。  
-**Play商店**: [[付费购买]](/redirect?target=https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked)  
+**Play商店**: [[付费购买]](https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked)  
 {{< pan 游戏 >}}  
 
 - - -

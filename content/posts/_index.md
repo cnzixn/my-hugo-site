@@ -1,6 +1,4 @@
 +++
-aliases = ["posts", "articles", "blog"]
+aliases = ["posts", "p"]
 title = "全部"
-author = "Admin"
-tags = ["index"]
 +++
