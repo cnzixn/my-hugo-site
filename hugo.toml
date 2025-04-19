@@ -58,7 +58,7 @@ search = true
 # mainSections = ["posts"]
 
 [params.comments]
-enable = true  # En/Disable comments globally, default: false. You can always enable comments on per page.
+enable = false  # En/Disable comments globally, default: false. You can always enable comments on per page.
 
 # [params.comments.utterances]
 # 暂未使用
