@@ -2,20 +2,18 @@
 
 local_backend: true
 
-# locale: "zh_" # 语言环境
-
-publish_mode: editorial_workflow
-
-media_folder: /static/img
-public_folder: /img
-
 backend:
   name: git-gateway
   branch: main
-  repo: cnzixn/my-hugo-site
+  # name: github
+  # repo: cnzixn/my-hugo-site
   squash_merges: true
   open_authoring: true
 
+media_folder: static/img
+public_folder: /img
+
+publish_mode: editorial_workflow
 
 # summary
 # Available template tags:
@@ -30,37 +28,58 @@ backend:
 collections:
   - name: "posts"
     label: "文章页面"
-    folder: "content/posts"
+    folder: "content/posts"  # 内容存储路径
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    # summary: "{{filename}} - {{commit_author}} - {{commit_date}}"
+    extension: "md"         # 文件扩展名
+    # format: "yaml"   # 声明 Front Matter 格式
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # 文件名规则（可选）
+    editor:
+      preview: false        # 关闭预览，纯文本模式
     fields:
-      - {label: "标题", name: "title"}
-      - {label: "时间", name: "date", widget: "string", pattern: ["\\d{4}-\\d{2}-\\d{2}", "年月日，必须是 YYYY-MM-DD 格式"] }
-      - {label: "作者", name: "author", default: "bny"}
-      - {label: "标签", name: "tags", widget: "list"}
-      - {label: "短链", name: "aliases", widget: "list", required: false}
-      - {label: "讨论", name: "comments", required: false}
-      - {label: "内容", name: "body", widget: "markdown"}
+      - name: "body"
+        label: "完整内容"
+        widget: "text"      # 直接编辑整个文件内容
+        default: |
+          ---
+          title: "新文章"
+          date: "2025/01/01"
+          author: "bny"
+          tags: []
+          aliases: []
+          comments: true
+          ---
+          
+          在此开始撰写正文...
+
+  # - name: "pages"
+    # label: "其他页面"
+    # folder: "content"
+    # create: true
+    # slug: "{{file}}"
+    # fields:
+      # - {label: "保存", name: "file"}
+      # - {label: "标题", name: "title", widget: "string"}
+      # - {label: "布局", name: "layout", widget: "string", default: "page"}
+      # - {label: "内容", name: "body", widget: "text"}
     # publish: false  # 普通用户不可直接发布
 
   - name: "pages"
     label: "其他页面"
     folder: "content"
     create: true
-    slug: "{{file}}"
+    extension: "md"
+    slug: "{{title}}"
     fields:
-      - {label: "保存", name: "file"}
-      - {label: "标题", name: "title", widget: "string"}
-      - {label: "布局", name: "layout", widget: "string", default: "page"}
-      - {label: "内容", name: "body", widget: "markdown"}
-    # publish: false  # 普通用户不可直接发布
-
-
-
-
-
-
+      - name: "body"
+        label: "Markdown"
+        widget: "text"  # 直接编辑整个文件
+        default: |
+          ---
+          title: "新文章"
+          ayout: post
+          single: true
+          ---
+          在此开始撰写内容...
 
 
 
