@@ -1,5 +1,5 @@
 ---
-title: 模组 - 如何安装？
+title: 模组 - 安装教程
 date: 2025-03-27T12:20:00.000Z
 author: Bny
 tags:

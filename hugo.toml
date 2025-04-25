@@ -88,17 +88,17 @@ showTags = false             # /tags/
 showBottom = false # article navigation
 
 # custom navigation items
-[[params.nav.custom]]
-title = "全部"
-url = "/posts"
-
-[[params.nav.custom]]
-title = "资料"
-url = "/tags/资料"
+# [[params.nav.custom]]
+# title = "全部"
+# url = "/posts"
 
 [[params.nav.custom]]
 title = "日志"
 url = "/tags/日志"
+
+[[params.nav.custom]]
+title = "资料"
+url = "/tags/资料"
 
 [[params.nav.custom]]
 title = "搜索"
@@ -134,3 +134,6 @@ url = "/about"
   # docker = "zhangsan-docker"
   # twitter = "zhangsan-twitter"
   # email = "zhangsan@example.com"
+
+[build]
+disableBuildLock = true

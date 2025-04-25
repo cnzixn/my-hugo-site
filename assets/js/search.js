@@ -20,7 +20,7 @@ fetch("/index.json")
   .then(data => {
     console.log("加载的文章数据:", data);
     fuse = new Fuse(data, {
-      keys: ["title", "content", "tags"],  // 搜索标题，摘要，标签
+      keys: ["title", "content", "tags", "aliases"],  // 搜索标题，摘要，标签
       threshold: 0.3
     });
 

@@ -1,6 +1,6 @@
 +++
 date = '2025-02-28T12:50:06Z'
-title = '壁纸 - 怎么制作？'
+title = '壁纸 - 制作教程'
 author = "Bny"
 tags = ["资料"]
 aliases = ["wallpaper"]

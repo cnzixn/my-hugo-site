@@ -1,5 +1,5 @@
 ---
-title: 按键 - 怎么使用？
+title: 按键 - 使用教程
 date: 2025-04-18
 author: Bny
 tags:
