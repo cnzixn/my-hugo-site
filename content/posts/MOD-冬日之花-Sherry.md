@@ -1,6 +1,6 @@
 ---
-title: "冬日之花雪莉"
-date: "2025-04-30"
+title: 冬日之花雪莉
+date: 2025-04-30
 author: HelloHan
 tags:
   - 人物
@@ -16,9 +16,9 @@ comments: true
 ## 文件下载
 
 > Sherry (冬日之花)  
-**百度网盘**: [[点击下载]](https://pan.baidu.com/s/15tXavt4cfByYHe6BbHRLAg) 密码: <mark>9494</mark>  
-**夸克网盘**: [[点击下载]](https://pan.quark.cn/s/45440c155d39) 密码: <mark>G9KR</mark>  
-
+**百度网盘**: [[点击下载]](https://pan.baidu.com/s/1WqXStnDI077ZatjLgiI4tw) 密码:
+ <mark>9494</mark>  
+**夸克网盘**: [[点击下载]](https://pan.quark.cn/s/8c8347439603) 密码: <mark>PYtb</mark>  
 
 ---
 
