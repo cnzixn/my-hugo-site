@@ -1,29 +1,29 @@
 {{ $name := .Get 0 }}
 
 {{ with index site.Data.links_quark $name }}
-    <strong>夸克网盘</strong>: <a href="/redirect?target={{ .url }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
+    <strong>夸克网盘</strong>: <a href="{{ .url }}?pwd={{ .psw }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
 {{ else }}
-    <!-- <strong>夸克网盘</strong>: <a href="/redirect?target=https://pan.quark.cn/s/6368b2aabbad">[点击下载]</a> 密码: <mark>hdLK</mark><br> -->
+    <!-- <strong>夸克网盘</strong>: <a href="https://pan.quark.cn/s/6368b2aabbad">[点击下载]</a> 密码: <mark>hdLK</mark><br> -->
     <!-- <strong>夸克网盘</strong>: 暂无链接<br> -->
 {{ end }}
 
 {{ with index site.Data.links_baidu $name }}
-    <strong>百度网盘</strong>: <a href="/redirect?target={{ .url }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
+    <strong>百度网盘</strong>: <a href="{{ .url }}?pwd={{ .psw }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
 {{ else }}
-    <!-- <strong>百度网盘</strong>: <a href="/redirect?target=https://pan.baidu.com/s/1fwKl199sdPrrkUOUrwADFA">[点击下载]</a> 密码: <mark>otfc</mark><br> -->
+    <!-- <strong>百度网盘</strong>: <a href="https://pan.baidu.com/s/1fwKl199sdPrrkUOUrwADFA">[点击下载]</a> 密码: <mark>otfc</mark><br> -->
     <!-- <strong>百度网盘</strong>: 暂无链接<br> -->
 {{ end }}
 
 {{ with index site.Data.links_xunlei $name }}
-    <strong>迅雷网盘</strong>: <a href="/redirect?target={{ .url }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
+    <strong>迅雷网盘</strong>: <a href="{{ .url }}?pwd={{ .psw }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
 {{ else }}
-    <!-- <strong>迅雷网盘</strong>: <a href="/redirect?target=https://pan.xunlei.com/s/VOC9fKcAKT7Av35IhFifm7aXA1">[点击下载]</a> 密码: <mark>5jia</mark><br> -->
+    <!-- <strong>迅雷网盘</strong>: <a href="https://pan.xunlei.com/s/VOC9fKcAKT7Av35IhFifm7aXA1">[点击下载]</a> 密码: <mark>5jia</mark><br> -->
     <!-- <strong>迅雷网盘</strong>: 暂无链接<br> -->
 {{ end }}
 
-{{ with index site.Data.links_123pan $name }}
-    <strong>123 网盘</strong>: <a href="/redirect?target={{ .url }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br>
+{{ with index site.Data.links_pan123 $name }}
+    <!-- <strong>123 网盘</strong>: <a href="{{ .url }}">[点击下载]</a> 密码: <mark>{{ .psw }}</mark><br> -->
 {{ else }}
-    <!-- <strong>123 网盘</strong>: <a href="/redirect?target=https://www.123pan.com/s/IC8lVv-ftuAv.html">[点击下载]</a> 密码: <mark>ZFyG</mark><br> -->
+    <!-- <strong>123 网盘</strong>: <a href="https://www.123pan.com/s/IC8lVv-ftuAv.html">[点击下载]</a> 密码: <mark>ZFyG</mark><br> -->
     <!-- <strong>123 网盘</strong>: 暂无链接<br> -->
 {{ end }}

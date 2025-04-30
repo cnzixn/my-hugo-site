@@ -33,10 +33,13 @@ collections:
         default: |
           ---
           title: "新文章"
-          date: "2025/01/01"
+          date: "2025-01-01"
           author: "bny"
-          tags: []
-          aliases: []
+          tags: 
+            - 标签1
+            - 标签2
+          aliases: 
+            - 短链接
           comments: true
           ---
           

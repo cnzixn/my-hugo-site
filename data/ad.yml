@@ -1,0 +1,11 @@
+# 文件：data/ad.yml
+ads:
+  - image: /img/ad1.png
+    link: /ad1
+    alt: "查看详情"
+  - image: /img/ad2.png
+    link: /ad2
+    alt: "立即抢购"
+  - image: /img/ad3.png
+    link: /ad3
+    alt: "极速发货"
