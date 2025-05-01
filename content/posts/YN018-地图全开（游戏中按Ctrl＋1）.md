@@ -17,7 +17,7 @@ comments: false
 
 ```lua  
 
-十八.地图全开（游戏中按Ctrl+1）	用记事本打开游戏目录/assets/DLC0002/scripts/prefabs/player_common.lua文件，在inst:AddComponent("resurrectable")下一行插入以下内容：TheInput:AddKeyUpHandler(KEY_1, function()	if TheInput:IsKeyDown(KEY_CTRL) then	   local map = TheSim:FindFirstEntityWithTag("minimap")	   local x,y,z = GetPlayer().Transform:GetWorldPosition()	   map.MiniMap:ShowArea(x, y, z, 10000)	endend)	即可在游戏中按Ctrl + 1使地图全开
+十八.地图全开（游戏中按Ctrl+1）	用MT管理器打开游戏目录/assets/DLC0002/scripts/prefabs/player_common.lua文件，在inst:AddComponent("resurrectable")下一行插入以下内容：TheInput:AddKeyUpHandler(KEY_1, function()	if TheInput:IsKeyDown(KEY_CTRL) then	   local map = TheSim:FindFirstEntityWithTag("minimap")	   local x,y,z = GetPlayer().Transform:GetWorldPosition()	   map.MiniMap:ShowArea(x, y, z, 10000)	endend)	即可在游戏中按Ctrl + 1使地图全开
 
 ```  
 

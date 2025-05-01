@@ -17,7 +17,7 @@ comments: false
 
 ```lua  
 
-三五六.地图不显示已探索区域（按键盘Ctrl+2关闭地图显示，再按一次解锁）	用记事本打开游戏目录/assets/DLC0002/scripts/prefabs/player_common.lua文件，在inst:AddComponent("resurrectable")下一行插入以下内容：TheInput:AddKeyUpHandler(KEY_2, function()	if TheInput:IsKeyDown(KEY_CTRL) then	   local map = TheSim:FindFirstEntityWithTag("minimap")	   if not inst:HasTag("mapoff") then		  inst:AddTag("mapoff")		  map.MiniMap:ClearRevealedAreas(true)	   else		  inst:RemoveTag("mapoff")		  map.MiniMap:ClearRevealedAreas(false)	   end	endend )	即可按键盘Ctrl+2，让小地图全黑，并且不再显示已探索区域，增加探险的难度。再次按Ctrl+2，可解锁小地图显示已探索区域
+三五六.地图不显示已探索区域（按键盘Ctrl+2关闭地图显示，再按一次解锁）	用MT管理器打开游戏目录/assets/DLC0002/scripts/prefabs/player_common.lua文件，在inst:AddComponent("resurrectable")下一行插入以下内容：TheInput:AddKeyUpHandler(KEY_2, function()	if TheInput:IsKeyDown(KEY_CTRL) then	   local map = TheSim:FindFirstEntityWithTag("minimap")	   if not inst:HasTag("mapoff") then		  inst:AddTag("mapoff")		  map.MiniMap:ClearRevealedAreas(true)	   else		  inst:RemoveTag("mapoff")		  map.MiniMap:ClearRevealedAreas(false)	   end	endend )	即可按键盘Ctrl+2，让小地图全黑，并且不再显示已探索区域，增加探险的难度。再次按Ctrl+2，可解锁小地图显示已探索区域
 
 ```  
 
