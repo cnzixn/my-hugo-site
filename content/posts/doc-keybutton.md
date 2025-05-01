@@ -33,7 +33,7 @@ BM000
 ### 配置文件
 
 ```lua
--- scripts/keybutton.lua
+-- BM000/scripts/keybutton.lua
 
 -- 示例
 local fn_key_a_up = function()

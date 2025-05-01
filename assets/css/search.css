@@ -21,6 +21,41 @@
       outline: none;
       transition: all 0.3s ease-in-out;
     }
+    
+    
+    .tag-cloud {
+  display: flex !important; /* 强制 flex 布局 */
+  flex-wrap: nowrap !important; /* 禁止换行 */
+  overflow-x: auto; /* 允许横向滚动 */
+  white-space: nowrap; /* 禁止文本换行 */
+  width: 100%; /* 占满父容器宽度 */
+  max-width: 100%; /* 防止溢出 */
+  padding: 10px 0;
+  gap: 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  box-sizing: border-box;
+}
+
+/* 隐藏滚动条（可选） */
+.tag-cloud::-webkit-scrollbar {
+  display: none;
+}
+
+/* 确保标签不换行、不收缩 */
+.tag-button {
+  display: inline-block !important; /* 强制行内块 */
+  flex-shrink: 0 !important; /* 禁止收缩 */
+  white-space: nowrap !important; /* 禁止文本换行 */
+  padding: 5px 12px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
 
     /* 搜索结果列表 */
     #search-results {
