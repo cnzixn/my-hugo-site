@@ -9,15 +9,16 @@ aliases:
 comments: true
 ---
 
-> 本文介绍了模组 **Sherry (冬日之花)** 的功能与特点。
+> 本文介绍了模组 **Sherry (冬日之花——新版雪莉)** 的功能与特点。
 
 ---
 
 ## 文件下载
 
-> Sherry (冬日之花)  
-**百度网盘**: [[点击下载]](https://pan.baidu.com/s/15tXavt4cfByYHe6BbHRLAg) 密码: <mark>9494</mark>  
-**夸克网盘**: [[点击下载]](https://pan.quark.cn/s/45440c155d39) 密码: <mark>G9KR</mark>  
+> Sherry (冬日之花——雪莉)  
+ **百度网盘**: [[点击下载]](https://pan.baidu.com/s/1POSlYOqVYEU2LA6zF2SS1g) 密码:
+  <mark>9494</mark>  
+**夸克网盘**: [[点击下载]](https://pan.quark.cn/s/575e0b3cd4d3) 密码: <mark>CiBC</mark>  
 
 
 ---
@@ -29,7 +30,7 @@ comments: true
   - 雪莉介绍视频现已发布：[[点击查看]](https://www.bilibili.com/video/BV1mZezeKErL)
 
 ``` shell
-雪莉初始三维:
+新版雪莉初始三维:
 
 - 饥饿值：100
 - 生命值：100
