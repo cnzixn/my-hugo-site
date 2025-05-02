@@ -34,7 +34,7 @@ collections:
     # format: "yaml"   # 声明 Front Matter 格式
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # 文件名规则（可选）
     editor:
-      preview: false        # 关闭预览，纯文本模式
+      preview: true        # 关闭预览，纯文本模式
     fields:
       - name: "body"
         label: "完整内容"

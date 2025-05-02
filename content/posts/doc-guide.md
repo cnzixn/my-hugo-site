@@ -6,7 +6,7 @@ tags:
   - 资料
 aliases:
   - guide
-comments: "false"
+comments: false
 ---
 > 请使用MT管理器操作，安装模组实质上就是将“压缩包”里的文件，添加到另一个压缩包。  
 
