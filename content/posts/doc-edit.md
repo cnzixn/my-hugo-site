@@ -15,7 +15,7 @@ comments: "false"
 
 ### 编辑页面
 
-文章的标题的下方显示有 [📝编辑](/cms/#/edit/posts/doc-edit) 按钮，点击它就可以进入[[CMS]](/cms/) 的编辑界面。
+文章的标题的下方显示有 [[✍🏻编辑]](/cms/#/edit/posts/doc-edit) 按钮，点击它就可以进入[[CMS]](/cms/) 的编辑界面。
 
 - - -
 

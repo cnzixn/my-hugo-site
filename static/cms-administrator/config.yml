@@ -38,7 +38,7 @@ collections:
     fields:
       - name: "body"
         label: "完整内容"
-        widget: "text"      # 直接编辑整个文件内容
+        widget: "markdown"      # 直接编辑整个文件内容
         default: |
           ---
           title: "新文章"
