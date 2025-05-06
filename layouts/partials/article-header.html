@@ -4,7 +4,7 @@
     <div class="article-meta">
       <span>👤{{ .Params.author }}</span>
       ｜<span> 🗓{{ .Date.Format "2006/01/02" }}</span>
-      ｜<span>👀<span id="busuanzi_value_page_pv">1</span></span>
+      ｜<span>👀<span id="busuanzi_value_page_pv">999</span></span>
       ｜<span><a class="edit-button"
                    title="编辑"
                    href="/cms/#/edit/{{ replace (replace .File.Path "content/" "") ".md" "" | safeURL }}"

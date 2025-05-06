@@ -24,15 +24,15 @@ comments: false
 
 ### 一、“内部”与“外部”目录  
 
-框架支持添加到“不同”版本，请注意这里<kbd>包名</kbd>有变化。
+框架支持添加到“不同”版本，请注意这里`包名`有变化。
 
-内部：<kbd>/data/data/\<package\>/</kbd>
+内部：`/data/data/<package>/`
 ```lua
 /data/data/hei.kleientertainment.doNotStarveShipwrecked/
 ```
 ![图片](/img/o7ElukfGOHILdMa.webp)  
 
-外部：<kbd>/sdcard/Android/data/\<package\>/</kbd>  
+外部：`/sdcard/Android/data/<package>/`  
 ```lua
 /sdcard/Android/data/hei.kleientertainment.doNotStarveShipwrecked/
 ```

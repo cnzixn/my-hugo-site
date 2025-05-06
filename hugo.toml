@@ -49,7 +49,7 @@ unsafe = true  # enable raw HTML in Markdown
 [params]
 style = "auto"  # default: auto. light: light theme, dark: dark theme, auto: based on system.
 dateFormat = ""  # if unset, default is "2006-01-02" Monday, January 2, 2006
-logo = "http://q1.qlogo.cn/g?b=qq&nk=1163650990&s=100"  # if you have a logo png
+logo = "img/logo.webp"  # if you have a logo png, http://q1.qlogo.cn/g?b=qq&nk=1163650990&s=100
 slogan = ""  # 100% JavaScript-free
 license = "<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1' >CC BY-NC-SA 4.0</a>"  # CC License
 fullRss = true # Puts entire HTML post into rss "description" tag. If unset, default is false.
@@ -88,9 +88,9 @@ showTags = false             # /tags/
 showBottom = false # article navigation
 
 # custom navigation items
-# [[params.nav.custom]]
-# title = "全部"
-# url = "/posts"
+[[params.nav.custom]]
+title = "全部"
+url = "/posts"
 
 [[params.nav.custom]]
 title = "日志"
@@ -112,9 +112,6 @@ url = "/faq"
 title = "关于"
 url = "/about"
 
-# [[params.nav.custom]]
-# title = "小店"
-# url = "/web-shop/"
 
 # for chinese
 [params.beian]
