@@ -4,7 +4,7 @@ backend:
   name: github
   repo: cnzixn/my-hugo-site
   branch: main
-  auth_type: web  # 必须为 web 模式
+  auth_type: implicit  # 如果不是 Netlify，改用 implicit
   base_url: https://a.bxq.me  # 例如 https://a.bxq.me
   site_domain: https://a.bxq.me  # 同上
   app_id: ${GITHUB_CLIENT_ID}
