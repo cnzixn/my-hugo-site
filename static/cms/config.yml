@@ -1,12 +1,12 @@
 local_backend: true
 
 backend:
-  name: git-gateway
-  branch: main
-  # name: github
-  # repo: cnzixn/my-hugo-site
-  squash_merges: true
-  open_authoring: true
+  name: github
+  repo: cnzixn/my-hugo-site  # 例如：octocat/my-hugo-site
+  branch: main                        # 仓库分支（默认 main）
+  auth_type: implicit                 # 简化认证流程
+  app_id: ${GITHUB_CLIENT_ID}
+  api_key: ${GITHUB_CLIENT_SECRET}
 
 media_folder: static/img
 public_folder: /img
