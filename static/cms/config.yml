@@ -1,10 +1,12 @@
-local_backend: true
+local_backend: false
 
 backend:
   name: github
-  repo: cnzixn/my-hugo-site  # 例如：octocat/my-hugo-site
-  branch: main                        # 仓库分支（默认 main）
-  auth_type: implicit                 # 简化认证流程
+  repo: cnzixn/my-hugo-site
+  branch: main
+  auth_type: web  # 必须为 web 模式
+  base_url: https://a.bxq.me  # 例如 https://a.bxq.me
+  site_domain: https://a.bxq.me  # 同上
   app_id: ${GITHUB_CLIENT_ID}
   api_key: ${GITHUB_CLIENT_SECRET}
 
@@ -19,59 +21,15 @@ styles:
 collections:
   - name: "posts"
     label: "文章页面"
-    folder: "content/posts"  # 内容存储路径
+    folder: "content/posts"
     create: true
-    extension: "md"         # 文件扩展名
-    # format: "yaml"   # 声明 Front Matter 格式
-    slug: "{{year}}-{{month}}-{{day}}-{{title}}"  # 文件名规则（可选）
-    editor:
-      preview: false        # 关闭预览，纯文本模式
+    extension: "md"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # 推荐使用 Hugo 的 slugify 函数处理标题
     fields:
-      - name: "body"
-        label: "内容"
-        widget: "text"      # 直接编辑整个文件内容
-        default: |
-          ---
-          title: "新文章"
-          date: "2025-01-01"
-          author: "bny"
-          tags: 
-            - 标签1
-            - 标签2
-          aliases: 
-            - 短链接
-          comments: true
-          ---
-          
-          在此开始撰写正文，支持 Markdown 格式...
-
-
-# collections:
-  # - name: "posts"
-    # label: "文章"
-    # folder: "content/posts"
-    # create: true
-    # slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    # fields:
-      # - { label: "标题", name: "title" }
-      # - { label: "时间", name: "date", widget: "string", pattern: ["\\d{4}-\\d{2}-\\d{2}", "\n年月日，必须是 YYYY-MM-DD 格式"] }
-      # - { label: "作者", name: "author", default: "bny"}
-      # - { label: "标签", name: "tags", widget: "list"}
-      # # - { label: "短链", name: "aliases", widget: "list"}
-      # # - { label: "讨论", name: "comments", default: "true"}
-      # - { label: "内容", name: "body", widget: "markdown"}
-    # publish: false  # 普通用户不可发布
-
-  # - name: "pages"
-    # label: "其他"
-    # folder: "content"
-    # create: true
-    # publish: false  # 普通用户不可直接发布
-    # slug: "{{slug}}"
-    # # access:
-      # # - role: "admin"
-    # fields:
-      # - { label: "标题", name: "title", widget: "string"}
-      # - { label: "布局", name: "layout", widget: "string", default: "page", hide: true}
-      # - { label: "内容", name: "body", widget: "markdown"}
-
+      - { name: "title", label: "标题", widget: "string" }
+      - { name: "date", label: "日期", widget: "datetime", format: "YYYY-MM-DD", default: "{{ now }}" }
+      - { name: "author", label: "作者", widget: "string", default: "bny" }
+      - { name: "tags", label: "标签", widget: "list", default: ["标签1", "标签2"] }
+      - { name: "aliases", label: "短链接", widget: "list", required: false }
+      - { name: "comments", label: "开启评论", widget: "boolean", default: true }
+      - { name: "body", label: "正文", widget: "markdown" }
