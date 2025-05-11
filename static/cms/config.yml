@@ -5,8 +5,8 @@ backend:
   repo: cnzixn/my-hugo-site
   branch: main
   auth_type: implicit  # 如果不是 Netlify，改用 implicit
-  base_url: https://a.bxq.me  # 例如 https://a.bxq.me
-  site_domain: https://a.bxq.me  # 同上
+  # base_url: https://a.bxq.me  # 例如 https://a.bxq.me
+  # site_domain: https://a.bxq.me  # 同上
   app_id: ${GITHUB_CLIENT_ID}
   api_key: ${GITHUB_CLIENT_SECRET}
 
