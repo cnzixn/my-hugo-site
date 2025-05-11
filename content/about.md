@@ -4,7 +4,7 @@ single: true
 layout: post
 ---
 
-<h1 class="article header">兔人协会</h1>
+<h1 class="article header">兔人协会 - 档案馆</h1>
 
 #### 〇、关于本站
  
