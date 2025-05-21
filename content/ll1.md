@@ -1,0 +1,19 @@
+---
+title: "流量卡"
+layout: "main"
+single: true
+comments: false
+备注: "飞江卡 145"
+---
+
+<div style="display: flex; justify-content: center; align-items: top; height: 75vh; position: relative;">
+      <div id="loading-message" style="display: flex; justify-content: center; align-items: center; height: 50%; width: 100%; position: absolute; top: 0; left: 0; background-color: rgba(255, 255, 255, 0.8); z-index: -1;">
+        <p style="font-size: 24px; color: #333;">加载中...</p>
+      </div>
+      <iframe id="shop-link"
+        src="https://172.lot-ml.com/h5orderEn/index?pudID=32c0795066d1467d&userid=6babd1bdd232e810" 
+        width="98%" 
+        height="98%" 
+        style="border: none; max-width: 1200px;"
+      ></iframe>
+</div>

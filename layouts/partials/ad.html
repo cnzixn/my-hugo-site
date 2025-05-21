@@ -85,12 +85,14 @@
   top: 0.01rem;
   left: 0.01rem;
   //background-color: red;
-  color: #888;
+  color: red;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 12px;
 }
 </style>
+
+
 
 <script>
 // 强制重置存储
@@ -127,7 +129,7 @@ function showPopup(ad) {
 
   // 添加倒计时逻辑
   const countdownElement = document.getElementById('countdown');
-  let countdown = 9; // 设置倒计时时间为5秒
+  let countdown = 5; // 设置倒计时时间为5秒
   const countdownInterval = setInterval(() => {
     countdownElement.textContent = "广告每日 " + showCount +"/3 次，本次剩余 " + countdown + " 秒。";
     countdown--;
@@ -166,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
   if ((!lastPopupTime || (now - parseInt(lastPopupTime)) >= 300 * 1000) && showCount < 3) {
     resetStorage();
     // 从 ad.json 加载数据
-    fetch('/ad.json')
+    fetch('/ad.json?t='+now)
      .then(response => response.json())
      .then(data => {
         const ads = data.ads;
