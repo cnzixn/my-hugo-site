@@ -1,0 +1,27 @@
+{{/* 
+  ad-bubble.html - 显示广告内容的气泡partial
+  从/data/ad.yml读取广告数据，以90%宽度的卡片形式展示
+*/}}
+
+{{- $ads := site.Data.ads -}}
+{{- if $ads -}}
+    <!-- 单个气泡容器 -->
+  <div class="ad-container">
+    <div class="ad-bubble article license">
+      <!-- 添加"广告"标签 -->
+      <span class="ad-label">广告</span>
+      
+      <!-- 广告链接列表（每个链接换行显示） -->
+      <div class="ad-links">
+        {{- range $ads -}}
+          <a href="{{ .link }}" class="ad-link" target="_blank" rel="noopener noreferrer">
+            {{ .text }}
+          </a>
+          <br> <!-- 换行 -->
+        {{- end -}}
+      </div>
+    </div>
+  </div>
+{{- else -}}
+  <!-- 无广告时隐藏整个气泡 -->
+{{- end -}}

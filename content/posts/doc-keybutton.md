@@ -8,9 +8,10 @@ aliases:
   - keybutton
 comments: false
 ---
+
 > 本文介绍如何新增按键功能。
 
-- - -
+---
 
 ### 游戏截图
 
@@ -28,11 +29,12 @@ BM000
 │  └─ keybutton.lua  # 配置文件  
 ```
 
-- - -
+---
 
 ### 配置文件
 
 ```lua
+
 -- BM000/scripts/keybutton.lua
 
 -- 示例 (其他模组中的按键功能)
@@ -101,6 +103,7 @@ return keybutton
 下面是我自用的配置文件，大佬可以自行更改。小白可以喂给 AI，然后提出修改要求。
 
 ```lua
+
 --------------------------------------------------
 -- 按键功能：代码建议放到模组的 modmain.lua 文件(否则，代码出错，可能导致按键配置失效)
 
@@ -246,8 +249,6 @@ return data_keybutton
 
 
 
-- - -
+---
 
-{{< reward-button >}}
-
-- - -
+[注释]: {{<reward-button>}}

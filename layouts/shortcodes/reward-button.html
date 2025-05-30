@@ -1,17 +1,12 @@
-<div class="sponsor-button-wrapper" style="margin-top: 0.8rem; display: flex; justify-content: center;">
-  <button class="sponsor-button"
-          onclick="toggleSponsorQR(this)"
-          style="background: #4a90e2; color: white; padding: 0.8rem 5.8rem; border: none; border-radius: 5px; cursor: pointer; transition: all 0.2s ease;">
-    💝赞助作者
+<div class="sponsor-button-wrapper">
+  <button class="sponsor-button" onclick="toggleSponsorQR(this)">
+    💝 赞助作者
   </button>
 
   <!-- 二维码容器（默认隐藏） -->
-  <div id="sponsorQRContainer" 
-       class="sponsor-qr-container article-container"
-       style="width: 80%; display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1000;">
-    
+  <div id="sponsorQRContainer" class="sponsor-qr-container article-container">
     <!-- 二维码内容区 -->
-    <div loading="lazy" style="text-align: center; ">
+    <div loading="lazy" style="text-align: center;">
       <img loading="lazy" src="/img/wechat-qrcode.webp" alt="微信二维码" width="45%" style="margin-right: 10px; margin-top: 20px; border: 2px solid #eee; border-radius: 22px;">
       <img loading="lazy" src="/img/alipay-qrcode.webp" alt="支付宝二维码" width="45%" style="border: 2px solid #eee; border-radius: 22px;">
       <p>扫码支持作者，抢先体验测试内容。</p>
@@ -19,34 +14,19 @@
     </div>
   
     <!-- 右上角关闭按钮 -->
-    <button class="close-button"
-            onclick="toggleSponsorQR(event.target.parentElement)"
-            style="position: absolute; 
-                  top: 5%; 
-                  right: 3%; 
-                  background: transparent; 
-                  border: none; 
-                  color: #ff4d4f; 
-                  font-size: 12px; 
-                  font-weight: bold; 
-                  cursor: pointer; 
-                  z-index: 1001;">
+    <button class="close-button" onclick="toggleSponsorQR(event.target.parentElement)">
       ❌
     </button>
   </div>
-
 </div>
 
 <script>
 function toggleSponsorQR(buttonElement) {
-  const container = document.getElementById('sponsorQRContainer');
-  container.style.display = container.style.display === 'none' ? 'block' : 'none';
-  
-  // 如果需要添加关闭点击事件到整个容器
-  if (!container.onclick) {
-    container.onclick = function() {
-      this.style.display = 'none';
-    }
+  const container = buttonElement.parentElement.querySelector('.sponsor-qr-container');
+  if (!container) {
+    console.error('未找到二维码容器');
+    return;
   }
+  container.classList.toggle('show');
 }
 </script>

@@ -6,7 +6,7 @@
 {{end}}
 {{ $part := .Get "p" | default (.Get 1 | default 1) }}
 {{if $bvid}}
-    <div class="video_wrapper">
+    <div class="video_wrapper" style="display: flex; justify-content: center;">
       <iframe src="//player.bilibili.com/player.html?isOutside=true&bvid={{ $bvid }}&p={{ $part }}" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
     </div>
 {{else}}

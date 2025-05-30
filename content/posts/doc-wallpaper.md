@@ -112,6 +112,4 @@ end
 
 ---
 
-{{< reward-button >}}
-
----
+[注释]: {{<reward-button>}}

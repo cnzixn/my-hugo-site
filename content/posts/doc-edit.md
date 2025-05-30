@@ -62,6 +62,5 @@ comments: true
 
 ---
 
-{{< reward-button >}}
+[注释]: {{<reward-button>}}
 
-- - -

@@ -1,58 +1,56 @@
-
+/* 全局变量（使用CSS变量实现统一风格） */
+:root {
+  --primary-color: #1890ff;          /* 主蓝色 */
+  --primary-hover-color: #096dd9;    /* 悬停蓝色 */
+  --text-gray: #6c757d;              /* 按钮默认灰色 */
+  --text-dark-gray: #5a6268;         /* 按钮悬停灰色 */
+  --text-darker-gray: #545b62;       /* 按钮按下灰色 */
+  --background-light: #f5f5f5;       /* 浅灰色背景 */
+  --border-light: #e0e0e0;           /* 浅灰色边框 */
+  --background-hover: #eaeaea;       /* 悬停浅灰色背景 */
+  --border-hover: #bdbdbd;           /* 悬停深灰色边框 */
+  --shadow-color: rgba(0, 0, 0, 0.1);/* 阴影颜色 */
+  --dark-mode-bg: #333;              /* 暗色模式背景 */
+  --dark-mode-text: #d8dde2;         /* 暗色模式文字 */
+  --gold-color: #ffd700;             /* 金色（用于管理员角色） */
+  --light-gray: #abb3c8;             /* 浅灰色（用于普通用户角色） */
+  --sponsor-bg: #4a90e2;             /* 赞助按钮背景色 */
+  --sponsor-hover-bg: #357abd;       /* 赞助按钮悬停背景色 */
+  --close-btn-color: #ff4d4f;        /* 关闭按钮颜色 */
+}
 
 /* 为所有图片添加灰色边框和圆角 */
 img {
-    border: 1px solid #ddd;     /* 边框颜色和粗细 */
-    padding: 0;               /* 内边距 */
-    border-radius: 4px;         /* 圆角 */
+  border: 1px solid var(--border-light);
+  padding: 0;
+  border-radius: 4px;
 }
 
-/* 可选：为响应式图片保持比例 */
-/*img.responsive {*/
-    /*max-width: 100%;*/
-    /*height: auto;*/
-/*}*/
-
-/*主页按钮*/
+/* 主页按钮 */
 .button-container {
-  margin-top: 20px;
   display: flex;
   flex-direction: column; /* 竖排 */
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
   min-height: 60vh; /* 使容器高度占满整个视口 */
-  gap: 15px; /* 按钮间距 */
+  gap: 0; /* 按钮间距 */
 
   .button {
     display: inline-block;
-    padding: 15px 30px; /* 放大按钮 */
-    background-color: #6c757d; /* 使用柔和的灰色背景 */
-    color: #fff; /* 白色文字 */
+    padding: 12px 16px;
     text-decoration: none;
-    border-radius: 5px; /* 圆角更简洁 */
-    font-size: 16px; /* 使用主题一致的字体大小 */
-    font-family: 'Helvetica Neue', sans-serif; /* 假设是简洁字体 */
+    border-radius: 8px; /* 稍大的圆角（与广告按钮一致） */
+    font-size: 16px; /* 字体大小 */
+    font-family: 'Helvetica Neue', sans-serif; /* 字体 */
     text-align: center;
-    width: 200px; /* 根据内容调整宽度 */
-    max-width: 250px; /* 设置最大宽度 */
+    width: 85%; /* 宽度 */
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 更细的阴影 */
+    box-shadow: none; /* 移除阴影（与广告按钮一致） */
   }
-  
-  .button:hover {
-    background-color: #5a6268; /* 悬停时颜色更暗 */
-    transform: scale(1.05); /* 悬停时稍微放大 */
-  }
-  
-  .button:active {
-    background-color: #545b62; /* 按下时的颜色 */
-    transform: scale(0.98); /* 按下时缩小 */
-  }
-
 }
 
 
-/*搜索页面*/
+/* 搜索页面 */
 .tag-cloud {
   margin-top: 1rem;
   display: flex;
@@ -62,22 +60,9 @@ img {
 
 .tag-button {
   padding: 0.2rem 0.5rem;
-  background: #4a90e2;
-  color: white;
-  border: none;
-  border-radius: 3px;
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 500;
-}
-
-.tag-button:hover:not(:disabled) {
-  background: #357abd;
-  transform: translateY(-2px);
-}
-
-.tag-button:active {
-  background: #2c5aa8;
 }
 
 /* 响应式设计 */
@@ -87,12 +72,8 @@ img {
   }
 }
 
-
-
-
 .edit-button {
   flex-shrink: 0;
-  /*margin-left: 0.8rem;*/
   transform: translateY(1px); /* 视觉对齐微调 */
 }
 
@@ -110,11 +91,7 @@ img {
   }
 }
 
-
-
-
-
-/*Q&A页面*/
+/* Q&A页面 */
 .faq-container {
     max-width: 780px;
     margin: 0.5rem 0.5rem;
@@ -129,15 +106,16 @@ img {
 
 .faq-date {
     justify-content: center;
-    /*margin: -0.5rem;*/
     font-size: 0.75em;
     color: #aaa;
 }
 
-.faq-question { flex-direction: row;}
-.faq-answer { flex-direction: row;}
-/*.answer { flex-direction: row-reverse}*/
-
+.faq-question { 
+  flex-direction: row;
+}
+.faq-answer { 
+  flex-direction: row;
+}
 
 .faq-userinfo {
   display: flex;
@@ -146,7 +124,7 @@ img {
 
 .faq-userrole {
   color: #fff;
-  background-color: #666;
+  background-color: var(--text-gray); /* 使用全局灰色 */
   border-radius: 3px;
   padding: 0.05rem 0.5rem;
   margin-right: 0.5rem;
@@ -154,16 +132,16 @@ img {
 }
 
 .faq-userrole.faq-admin {
-  background-color: #ffd700;
+  background-color: var(--gold-color); /* 管理员角色颜色 */
 }
 .faq-userrole.faq-user {
-  background-color: #abb3c8;
+  background-color: var(--light-gray); /* 普通用户角色颜色 */
 }
 
 .faq-avatar {
-    width: 40px!important;
-    height: 40px!important;
-    border-radius: 50%!important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
     border: 1px solid #e1e1e1;
     flex-shrink: 0;
 }
@@ -173,42 +151,32 @@ img {
     font-size: 1em;
 }
 
-/*.answer .username {*/
-    /*text-align: right;*/
-/*}*/
-/*.question .username {*/
-    /*text-align: right;*/
-/*}*/
-
-
 .faq-content {
     max-width: 18rem;
 }
 
 .faq-bubble {
-    background-color: #fff;
-    margin-top: 0.5rem ;
+    background-color: var(--background-light); /* 使用全局浅灰背景 */
+    margin-top: 0.5rem;
     padding: 0.5rem;
     width: fit-content; 
     border-radius: 6px;
-    /*border: 1px solid #ccc;*/
     line-height: 1.6;
-    box-shadow: 0 1px 3px rgba(0.3,0.3,0.3,0.08);
-    text-align: left!important;
-    flex-direction: row!important;
+    box-shadow: 0 1px 3px var(--shadow-color);
+    text-align: left !important;
+    flex-direction: row !important;
 }
-
 
 /* Dark mode styles */
-@media (prefers-color-scheme: dark){
-    .faq-bubble { 
-        background-color: #333;
-    }
+@media (prefers-color-scheme: dark) {
+  .faq-bubble { 
+      background-color: var(--dark-mode-bg); /* 暗色模式背景 */
+  }
+  
+  /* 可以在这里添加更多暗色模式下的样式调整 */
 }
 
-
-
-/*导航栏*/
+/* 导航栏 */
 .nav.item {
     margin-left: 1rem; /* 让导航栏往右边挪10px，可按需调整 */
     display: inline-block;
@@ -220,3 +188,128 @@ img {
     border-radius: 4px;
     transition: background-color 0.3s;
 }
+
+
+/* 多广告气泡容器 */
+.ad-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+}
+
+.ad-bubble {
+  width: 85%; /* 宽度 */
+  margin: 0 auto;
+  position: relative; /* 必须添加，用于绝对定位标签 */
+  display: inline-block; /* 保持块级特性但可嵌套 */
+  box-shadow: none; /* 移除阴影 */
+  text-align: left; /* 左对齐 */
+  color: var(--primary-color); /* 蓝色文字 */
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+/* 广告标签样式 */
+.ad-label {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 8px;
+  padding: 2px 6px;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+/* 广告链接列表容器 */
+.ad-links {
+  margin-top: 1rem; /* 标签与链接的间距 */
+}
+
+/* 单个广告链接样式 */
+.ad-link {
+  display: inline-block; /* 确保换行生效 */
+  color: var(--primary-color); /* 蓝色文字 */
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0.5rem auto;
+}
+
+
+
+/* 赞助按钮样式 */
+.sponsor-button-wrapper {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-button {
+  background-color: var(--sponsor-bg); /* 赞助按钮背景色 */
+  color: white;
+  padding: 0.8rem 5.8rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sponsor-button:hover {
+  background-color: var(--sponsor-hover-bg); /* 赞助按钮悬停背景色 */
+  transform: scale(1.05); /* 悬停时稍微放大 */
+}
+
+/* 二维码容器样式 */
+.sponsor-qr-container {
+  width: 80%;
+  display: none; /* 默认隐藏 */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: white; /* 添加背景色以确保内容清晰 */
+}
+
+.sponsor-qr-container.show {
+  display: block; /* 显示容器 */
+}
+
+/* 二维码内容区 */
+.sponsor-qr-container img {
+  display: inline-block;
+  margin-right: 10px;
+  margin-top: 20px;
+  border: 2px solid #eee;
+  border-radius: 22px;
+}
+
+.sponsor-qr-container p {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.sponsor-qr-container small {
+  display: block;
+  text-align: center;
+  color: #666;
+}
+
+/* 右上角关闭按钮 */
+.close-button {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+  background: transparent;
+  border: none;
+  color: var(--close-btn-color); /* 关闭按钮颜色 */
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+}
+

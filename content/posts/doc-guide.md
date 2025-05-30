@@ -61,6 +61,8 @@ comments: false
 
 [注释]: {{<pan"模组">}}  
 
+<small> **添加其他模组**：点击进入 /mods/_bmmods.lua 文件，按照说明进行相应操作。</small>  
+
 - - -
 
 ## 网盘
@@ -81,6 +83,5 @@ comments: false
 
 - - -
 
-{{< reward-button >}}
+[注释]: {{<reward-button>}}
 
-- - -

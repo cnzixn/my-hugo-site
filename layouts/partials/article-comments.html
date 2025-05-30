@@ -1,3 +1,9 @@
+<!-- 广告 -->
+{{- if and (not (eq .Params.single true)) -}}
+  {{- partial "ad-bubble.html" . -}}
+{{- end -}}
+
+<!-- 评论区 -->
 {{- if or (eq .Params.comments true) (and (ne .Params.comments false) (eq site.Params.comments.enable true)) -}}
 <div id="tcomment"></div>
 <!-- <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.42/dist/twikoo.all.min.js" defer></script> -->
@@ -10,6 +16,3 @@ twikoo.init({ envId: 'https://bxq.netlify.app/.netlify/functions/twikoo', el: '#
 
 
 <!-- <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.41/twikoo.all.min.js" integrity="sha384-XqRjIHRB13HFGom3gYeK+L2UHxFRl5qTZN+DESSXOgiiKYCwm6ZicU3oS3oovY6H" crossorigin="anonymous"></script> -->
-
-
-
