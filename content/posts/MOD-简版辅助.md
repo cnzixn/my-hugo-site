@@ -5,9 +5,6 @@ author: NGP
 tags:
   - 辅助
   - 实用
-aliases:
-  - 短链接
-comments: true
 ---
 
 ## 文件下载
