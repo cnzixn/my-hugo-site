@@ -1,6 +1,6 @@
 ---
 title: 模组 - 安装教程
-date: 2025-05-28T12:20:00.000Z
+date: 2025-06-01
 author: Bny
 tags:
   - 资料
