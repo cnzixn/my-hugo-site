@@ -3,7 +3,7 @@ title: "5G流量卡"
 layout: "main"
 single: true
 comments: false
-备注: "广东本地卡新 170"
+备注: "广东本地卡新 170 29 235 100"
 ---
 
 <div class="article" style="display: flex; justify-content: center; align-items: top; height: 75vh; position: relative;">

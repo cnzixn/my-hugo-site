@@ -3,7 +3,7 @@ title: "5G流量卡"
 layout: "main"
 single: true
 comments: false
-备注: "广电飞鹏卡-170-29-192G"
+备注: "广东联通 105 20 495 100"
 ---
 
 <div class="article" style="display: flex; justify-content: center; align-items: top; height: 75vh; position: relative;">
@@ -11,7 +11,7 @@ comments: false
         <p style="font-size: 24px; color: #333;">加载中...</p>
       </div>
       <iframe id="shop-link"
-        src="https://h5.lot-ml.com/h5orderEn/index?pudID=4de0d211aa97176a&userid=6babd1bdd232e810" 
+        src="https://h5.lot-ml.com/h5orderEn/index?pudID=eba1fc28e1cbf993&userid=6babd1bdd232e810" 
         width="98%" 
         height="98%" 
         style="border: none; max-width: 1200px;"

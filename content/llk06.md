@@ -3,7 +3,7 @@ title: "5G流量卡"
 layout: "main"
 single: true
 comments: false
-备注: "飞蜂卡-120-19-235"
+备注: "飞宁卡-115-29-240"
 ---
 
 <div class="article" style="display: flex; justify-content: center; align-items: top; height: 75vh; position: relative;">
@@ -11,7 +11,7 @@ comments: false
         <p style="font-size: 24px; color: #333;">加载中...</p>
       </div>
       <iframe id="shop-link"
-        src="https://h5.lot-ml.com/h5orderEn/index?pudID=c821f33bdf08d28d&userid=6babd1bdd232e810" 
+        src="https://h5.lot-ml.com/h5orderEn/index?pudID=ececeae2c7e68af3&userid=6babd1bdd232e810" 
         width="98%" 
         height="98%" 
         style="border: none; max-width: 1200px;"
