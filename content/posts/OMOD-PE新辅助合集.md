@@ -18,6 +18,8 @@ aliases:
 > PE 新辅助合集 2.6.3  
 **蓝奏云盘**: [[点击下载]](https://xfzdaxsg.lanzouw.com/b0crbhuzi) 密码: <mark>dax3</mark>
 
+<small> **安装说明**：点击进入`/mods/_bmmods.lua` 文件，按照说明进行相应操作。</small>  
+
 ---
 
 ## 模组简介

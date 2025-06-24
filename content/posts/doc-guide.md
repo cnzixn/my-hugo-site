@@ -21,7 +21,7 @@ comments: false
 [[框架]](#框架) BM25.06.01(133).ZIP  
 [[模组]](#模组) BM035.ZIP  
 {{< bili BV1k8UFYAEjq >}}
-<small> **注意**: 视频里搜的`千年狐`，现在改为<mark>BM035</mark>。</small>  
+<small> **注意**：视频里搜的`千年狐`，现在改为<mark>BM035</mark>。</small>  
 
 - - -
 

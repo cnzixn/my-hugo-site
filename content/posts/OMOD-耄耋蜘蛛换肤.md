@@ -23,6 +23,8 @@ aliases:
 
 **123 云盘**: [[点击下载]](https://www.123684.com/s/REwkjv-JhI23?pwd=iBDJ) 密码: <mark>iBDJ</mark>  
 
+<small> **安装说明**：点击进入`/mods/_bmmods.lua` 文件，按照说明进行相应操作。</small>  
+
 ---
 
 ## 模组简介

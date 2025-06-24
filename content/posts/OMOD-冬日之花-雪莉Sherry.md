@@ -20,6 +20,7 @@ comments: true
   <mark>9494</mark>  
 **夸克网盘**: [[点击下载]](https://pan.quark.cn/s/575e0b3cd4d3) 密码: <mark>CiBC</mark>  
 
+<small> **安装说明**：点击进入`/mods/_bmmods.lua` 文件，按照说明进行相应操作。</small>  
 
 ---
 
