@@ -48,14 +48,14 @@ aliases:
 
 ## 使用方法
 
-0、（手机）打开 TrollStore，点击右上角“➕”。
+（手机）打开 TrollStore，点击右上角“➕”。
 
-1、Install IPA File
-- （手机+电脑）连同一个 WiFi，登录同一个QQ
-- （电脑）用 QQ 给“我的手机”传 IPA 文件
-- （手机）点击 IPA 文件，用 TrollStore 打开
+Install IPA File
+- （手机+电脑）连同一个 WiFi，登录同一个QQ。
+- （电脑）QQ 给“我的手机”发送 IPA 文件。
+- （手机）QQ 在“我的电脑”点击 IPA 文件，用 TrollStore 打开。
 
-2、Install from URL
+Install from URL
 - 输入 IPA 的下载链接
 
 ---
