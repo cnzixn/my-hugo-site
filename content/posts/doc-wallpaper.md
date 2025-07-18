@@ -21,7 +21,7 @@ comments = false
 
 ### 下载壁纸
 
-> 从这里下载壁纸：[[王者荣耀壁纸]](https://pvp.qq.com/web201605/wallpaper.shtml)
+> 可以从这里下载壁纸：[[王者荣耀壁纸]](https://pvp.qq.com/web201605/wallpaper.shtml)
 
 选一个喜欢的壁纸，选择 1920*1080 ，我下载的是虞姬，命名为“yuji.png”。(图片大小需根据手机屏幕去剪裁，否则会有拉伸变形)  
 
@@ -46,15 +46,11 @@ comments = false
 
 ``` shell
 BM000  
-├─ anim  
-│  └─ wallpaper     # 动态壁纸  
-│      ├─ ...  
-│      └─ dst_menu_meta5.zip  
-├─ images  
-│  └─ wallpaper     # 静态壁纸  
+├─ wallpaper     # 壁纸  
 │      ├─ ...  
 │      ├─ yuji.xml    # 自制静态壁纸  
 │      ├─ yuji.tex     # 自制静态壁纸  
+│      ├─ dst_menu_meta5.zip  
 │      ├─ bg_loading_loading_charlie.xml  
 │      └─ bg_loading_loading_charlie.tex  
 ├─ scripts  
@@ -70,11 +66,11 @@ BM000
 
 local wallpaper = {
 
-	{ anim="anim/wallpaper/dst_menu_meta5.zip", build="dst_menu_meta5", bank="dst_menu_meta5", fn=function(anim) anim:SetPosition(75, 0) anim:SetScale(0.85) anim:GetAnimState():Hide("winter") end }, -- 温蒂小恶魔沃尔特(隐藏冬季特效)
+	{ anim="wallpaper/dst_menu_meta5.zip", build="dst_menu_meta5", bank="dst_menu_meta5", fn=function(anim) anim:SetPosition(75, 0) anim:SetScale(0.85) anim:GetAnimState():Hide("winter") end }, -- 温蒂小恶魔沃尔特(隐藏冬季特效)
 
-	{ atlas="images/wallpaper/bg_loading_loading_charlie.xml", image="loading_charlie.tex" },
+	{ atlas="wallpaper/bg_loading_loading_charlie.xml", image="loading_charlie.tex" },
 
-	{ atlas="images/wallpaper/yuji.xml", image="yuji.tex" }, -- 自制静态壁纸
+	{ atlas="wallpaper/yuji.xml", image="yuji.tex" }, -- 自制静态壁纸
 
 }
 
@@ -87,9 +83,7 @@ return wallpaper
 
 ### 动态壁纸
 
-动态壁纸，需要制作动画。我不会画，就没学做动画。
-
-代码，就只是将动画播放出来，调整一下位置和大小。
+动态壁纸，需要制作动画，代码可以参考官方的。(自行搜索教程)
 
 ``` lua
 -- scripts/screens/redux/multiplayermainscreen.lua
