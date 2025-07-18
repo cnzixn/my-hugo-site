@@ -1,5 +1,5 @@
 ---
-title: 苹果 - 解包/打包
+title: KLFA - 解包/打包
 date: 2025-07-18
 author: bny
 tags:
@@ -16,27 +16,40 @@ aliases:
 
 ## 文件下载
 
-> BM KLFA  
+> BM KLFA 25.07.18  
 {{< pan "KLFA" >}}  
+
+<small> **注意**：需要 Linux 环境，使用 lua 5.1 运行脚本。如需其他版本，请自行参考 [dont_starve.bms](https://aluigi.altervista.org/bms/dont_starve.bms) 写代码。</small>  
+
 
 ## 使用说明
 
+　我一般用手机写(玩)代码， [Termux.apk](https://termux.com) 这个软件用的最多，这里推荐一下。
+
+　吐槽：作为一个 ios 相关的教程，我竟然用 Android 的软件来操作。不要介意啦，它只是一个“工具”，你习惯用啥就用啥。
+
+#### 安装Lua
+
+``` bash
+pkg i lua51 -y
+```
+
 #### 解包命令
 
-``` lua
+``` bash
 lua klfa.lua -u data.archive _data.archive
 lua klfa.lua -u dlc0002.archive _dlc0002.archive
 ```
 
 #### 打包命令
 
-``` lua
+``` bash
 lua klfa.lua -p _data.archive data.archive
 lua klfa.lua -p _dlc0002.archive dlc0002.archive
 ```
 
 #### 操作流程
-- 购买并安装“饥荒”
+- 购买并安装“饥荒”(请支持正版哦)
 - 提取 IPA 文件，解压得到 .archive 文件
 - .archive 文件 >> 解包 >> 修改 >> 打包
 - 将改好的 .archive 文件打包回 IPA 文件
@@ -64,7 +77,7 @@ BM KLFA_LUA 25.07.18
       功能：执行打包操作
       示例：`lua klfa.lua -p _dlc0002.archive dlc0002.archive`
       说明：将指定源目录下的资源文件打包为 .archive 格式输出文件
-      
+
 ```
 
 

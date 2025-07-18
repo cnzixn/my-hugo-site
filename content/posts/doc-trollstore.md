@@ -46,6 +46,18 @@ aliases:
 
 6、（手机）打开 TrollStore，会自动安装ldid，失败就清后台多试几次！（可能需要开启魔法上网，我使用手机流量，开关飞行模式，试好几次才成功）
 
+## 使用方法
+
+0、（手机）打开 TrollStore，点击右上角“➕”。
+
+1、Install IPA File
+- （手机+电脑）连同一个 WiFi，登录同一个QQ
+- （电脑）用 QQ 给“我的手机”传 IPA 文件
+- （手机）点击 IPA 文件，用 TrollStore 打开
+
+2、Install from URL
+- 输入 IPA 的下载链接
+
 ---
 
 ## 参考资料

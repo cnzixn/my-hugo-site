@@ -18,8 +18,8 @@ comments: false
 
 　现在，是 AI 的时代，要学会使用 AI 解决问题。作为一个普通人，你能遇到什么“大麻烦”？你那点小问题，随便找个“人工智障”就能秒了。
 
-- [👉🏻豆包](https://www.doubao.com)：回答问题快，推荐日常使用。
-- [👉🏻 DS ](https://deepseek.com)：深思熟虑(慢)，回答比较专业。
+- [👉🏻豆包](https://doubao.com)：回答问题快，推荐日常使用。
+- [👉🏻DS](https://deepseek.com)：深思熟虑(慢)，回答比较专业。
 
 - - -
 
