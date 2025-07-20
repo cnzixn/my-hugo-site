@@ -53,10 +53,12 @@ comments: false
 
 > 饥荒: 船难(Shipwrecked) 是 Klei 和 CAPY Games 联合开发的一款 DLC 扩展包。  
 
-**Play商店**: [[付费购买]](https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked)  
+[注释ios]: https://apps.apple.com/us/app/dont-starve-shipwrecked/id1147297267?l=zh  
+
+**Play 商店**: [[付费购买]](https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked)  
 {{< pan 游戏 >}}  
 
-<small> **免责**：网盘内游戏仅供试玩，请自行上“Play商店”购买，或购买电脑版“补票”。</small>  
+<small> **免责**：网盘内游戏仅供试玩，请自行上“Play 商店”、“App Store”购买，或购买电脑版“补票”。</small>  
 
 - - -
 
