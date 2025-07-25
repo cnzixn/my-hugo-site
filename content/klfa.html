@@ -961,6 +961,44 @@
                 unpackResultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
             
+            function provideDownloadLink(blob, filename) {
+                const blobUrl = URL.createObjectURL(blob);
+            
+                if (/iP(hone|od|ad)/.test(navigator.platform)) {
+                    // iOS Safari：显示提示并插入下载链接
+                    const message = document.createElement('div');
+                    message.style.padding = '10px';
+                    message.style.background = '#fff3cd';
+                    message.style.border = '1px solid #ffeeba';
+                    message.style.color = '#856404';
+                    message.style.marginTop = '10px';
+                    message.style.borderRadius = '8px';
+                    message.textContent = 'iOS 限制：请长按下面的链接并选择“下载文件”。';
+            
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = blobUrl;
+                    downloadLink.textContent = `⬇️ 点击下载 ${filename}`;
+                    downloadLink.style.display = 'block';
+                    downloadLink.style.marginTop = '8px';
+                    downloadLink.style.color = '#007bff';
+                    downloadLink.style.fontWeight = 'bold';
+            
+                    document.body.appendChild(message);
+                    document.body.appendChild(downloadLink);
+                } else {
+                    // 其他浏览器：自动下载
+                    const link = document.createElement('a');
+                    link.href = blobUrl;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            
+                // 释放 blob URL
+                setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
+            }
+            
             // 解包下载按钮事件
             unpackDownloadBtn.addEventListener('click', () => {
                 unpackProgressText.textContent = '正在创建ZIP文件...';
@@ -987,33 +1025,10 @@
                             }
                         }).then((blob) => {
                             unpackProgressFill.style.width = '100%';
-                            unpackProgressText.textContent = 'ZIP文件创建完成！';
+                            unpackProgressText.textContent = 'ZIP 文件创建完成！';
                         
                             const zipFilename = `_${unpackOriginalFilename}.zip`;
-                        
-                            // iOS Safari 不支持 saveAs(blob, filename)，手动处理
-                            const blobUrl = URL.createObjectURL(blob);
-                        
-                            // 创建 <a> 元素并触发下载
-                            const link = document.createElement('a');
-                            link.href = blobUrl;
-                            link.download = zipFilename;
-                        
-                            // 对于 iOS Safari，必须使用 window.open 或手动点击
-                            if (/iP(hone|od|ad)/.test(navigator.platform)) {
-                                // iOS 直接打开新窗口，用户可手动保存
-                                window.open(blobUrl, '_blank');
-                            } else {
-                                // 其他浏览器自动下载
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                            }
-                        
-                            // 释放内存
-                            setTimeout(() => {
-                                URL.revokeObjectURL(blobUrl);
-                            }, 60000);
+                            provideDownloadLink(blob, zipFilename);
                         
                             setTimeout(() => {
                                 unpackProgressContainer.style.display = 'none';
@@ -1302,27 +1317,7 @@
             
             // 打包下载按钮事件
             packDownloadBtn.addEventListener('click', () => {
-                const filename = packOriginalFilename;
-                const blob = packArchiveBlob;
-            
-                const blobUrl = URL.createObjectURL(blob);
-                const link = document.createElement('a');
-                link.href = blobUrl;
-                link.download = filename;
-            
-                if (/iP(hone|od|ad)/.test(navigator.platform)) {
-                    // iOS Safari：只能新窗口打开
-                    window.open(blobUrl, '_blank');
-                } else {
-                    // 其他浏览器正常下载
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                }
-            
-                setTimeout(() => {
-                    URL.revokeObjectURL(blobUrl);
-                }, 60000);
+                provideDownloadLink(packArchiveBlob, packOriginalFilename);
             });
             
             // 打包重置按钮事件
