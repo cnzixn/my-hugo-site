@@ -28,7 +28,7 @@ layout: post
 
   - 框架本质上是一个“模组”，修复了被官方删减的模组支持功能。  
 
-  - 框架仅适配安卓版《饥荒：船难》的1.23及以上版本，推荐使用 1.33.4(最新)、1.28、1.23 版本。  
+  - 框架仅适配饥荒 [[Android]](https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked) 版本，推荐使用 1.33.4(最新)、1.28、1.23 版本。  
   
   - 框架安装后，可以使用“海洋之椅”在“巨人国”(RoG)和“船难”(SW)进行穿越。骑牛、栅栏、打包纸等内容，需要通过模组加入到游戏。  
   
@@ -78,13 +78,13 @@ layout: post
 
 - 重要声明：
   - 赞助是<mark>自愿打赏</mark>，并非商业行为。  
-  - <mark>测试内容</mark>，获取积分后免费使用。  
-  - <mark>测试积分</mark>，可在游戏内免费获取。  
 
 
 ---
 
 #### 五、联系我们
+
+- 邮箱：[[cnzixn@qq.com]](mailto:cnzixn@qq.com) 联系站长。
 
 - 频道: [[兔人协会]](https://qun.qq.com/qqweb/qunpro/share?inviteCode=2l2COvdUN0S) 反馈问题，日常交流。  
 

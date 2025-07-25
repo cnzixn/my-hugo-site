@@ -1,6 +1,6 @@
 ---
 title: 模组 - 安装教程
-date: 2025-06-01
+date: 2025-07-20
 author: Bny
 tags:
   - 资料
@@ -51,20 +51,19 @@ comments: false
 
 ## 游戏
 
-> 饥荒: 船难(Shipwrecked) 是 Klei 和 CAPY Games 联合开发的一款 DLC 扩展包。  
+> Shipwrecked 是 Klei 和 CAPY Games 联合开发的一款 DLC 扩展包。  
 
-[注释ios]: https://apps.apple.com/us/app/dont-starve-shipwrecked/id1147297267?l=zh  
-
+**App Store**: [[付费购买]](https://apps.apple.com/us/app/dont-starve-shipwrecked/id1147297267?l=zh)  
 **Play 商店**: [[付费购买]](https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked)  
 {{< pan 游戏 >}}  
 
-<small> **免责**：网盘内游戏仅供试玩，请自行上“Play 商店”、“App Store”购买，或购买电脑版“补票”。</small>  
+<small> **免责**：网盘内游戏仅供试玩，请自行上“App Store”、“Play 商店”购买，或购买电脑版“补票”。</small>  
 
 - - -
 
 ## 框架
 
-> 兔人框架已适配“Play商店”的 ShipWrecked 1.33.4 版本。  
+> 已适配 [[Android]](https://play.google.com/store/apps/details?id=com.kleientertainment.doNotStarveShipwrecked) 版本，即将支持 [[iOS]](https://apps.apple.com/us/app/dont-starve-shipwrecked/id1147297267?l=zh) 版本。 
 
 {{< pan "框架" >}}  
 
