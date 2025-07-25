@@ -556,10 +556,10 @@
                         <div class="stat-value" id="unpack-fileCount">0</div>
                         <div class="stat-label">文件数量</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="unpack-totalSize">0 KB</div>
-                        <div class="stat-label">总大小</div>
-                    </div>
+                    <!-- <div class="stat-item"> -->
+                        <!-- <div class="stat-value" id="unpack-totalSize">0 KB</div> -->
+                        <!-- <div class="stat-label">总大小</div> -->
+                    <!-- </div> -->
                     <div class="stat-item">
                         <div class="stat-value" id="unpack-archiveSize">0 KB</div>
                         <div class="stat-label">资源文件大小</div>
@@ -671,10 +671,10 @@
                         <div class="stat-value" id="pack-fileCount">0</div>
                         <div class="stat-label">文件数量</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-value" id="pack-totalSize">0 KB</div>
-                        <div class="stat-label">总大小</div>
-                    </div>
+                    <!-- <div class="stat-item"> -->
+                        <!-- <div class="stat-value" id="pack-totalSize">0 KB</div> -->
+                        <!-- <div class="stat-label">总大小</div> -->
+                    <!-- </div> -->
                     <div class="stat-item">
                         <div class="stat-value" id="pack-archiveSize">0 KB</div>
                         <div class="stat-label">资源文件大小</div>
@@ -961,42 +961,37 @@
                 unpackResultArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
             
-            function provideDownloadLink(blob, filename) {
-                const blobUrl = URL.createObjectURL(blob);
+            function provideDownload(blob, filename) {
+                const url = URL.createObjectURL(blob);
             
                 if (/iP(hone|od|ad)/.test(navigator.platform)) {
-                    // iOS Safari：显示提示并插入下载链接
-                    const message = document.createElement('div');
-                    message.style.padding = '10px';
-                    message.style.background = '#fff3cd';
-                    message.style.border = '1px solid #ffeeba';
-                    message.style.color = '#856404';
-                    message.style.marginTop = '10px';
-                    message.style.borderRadius = '8px';
-                    message.textContent = 'iOS 限制：请长按下面的链接并选择“下载文件”。';
-            
-                    const downloadLink = document.createElement('a');
-                    downloadLink.href = blobUrl;
-                    downloadLink.textContent = `⬇️ 点击下载 ${filename}`;
-                    downloadLink.style.display = 'block';
-                    downloadLink.style.marginTop = '8px';
-                    downloadLink.style.color = '#007bff';
-                    downloadLink.style.fontWeight = 'bold';
-            
-                    document.body.appendChild(message);
-                    document.body.appendChild(downloadLink);
+                    // iOS：显示提示和下载链接
+                    const wrapper = document.createElement('div');
+                    wrapper.style.background = '#fff3cd';
+                    wrapper.style.padding = '12px';
+                    wrapper.style.margin = '12px 0';
+                    wrapper.style.borderRadius = '6px';
+                    wrapper.style.border = '1px solid #ffeeba';
+                    wrapper.style.color = '#856404';
+                    wrapper.innerHTML = `
+                        <p>iOS 系统限制：请长按下面的链接，然后选择“下载文件”</p>
+                        <a href="${url}" style="display:inline-block;margin-top:6px;color:#007bff;font-weight:bold;">
+                            ⬇️ 下载 ${filename}
+                        </a>
+                    `;
+                    document.body.appendChild(wrapper);
                 } else {
                     // 其他浏览器：自动下载
                     const link = document.createElement('a');
-                    link.href = blobUrl;
+                    link.href = url;
                     link.download = filename;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
                 }
             
-                // 释放 blob URL
-                setTimeout(() => URL.revokeObjectURL(blobUrl), 60000);
+                // 释放资源
+                setTimeout(() => URL.revokeObjectURL(url), 60 * 1000);
             }
             
             // 解包下载按钮事件
@@ -1028,7 +1023,7 @@
                             unpackProgressText.textContent = 'ZIP 文件创建完成！';
                         
                             const zipFilename = `_${unpackOriginalFilename}.zip`;
-                            provideDownloadLink(blob, zipFilename);
+                            provideDownload(blob, zipFilename);
                         
                             setTimeout(() => {
                                 unpackProgressContainer.style.display = 'none';
@@ -1317,7 +1312,7 @@
             
             // 打包下载按钮事件
             packDownloadBtn.addEventListener('click', () => {
-                provideDownloadLink(packArchiveBlob, packOriginalFilename);
+                provideDownload(packArchiveBlob, packOriginalFilename);
             });
             
             // 打包重置按钮事件
